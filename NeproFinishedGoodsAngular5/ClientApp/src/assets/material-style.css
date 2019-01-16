@@ -467,11 +467,11 @@ pre code {
 }
 }
 .container-fluid {
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto
+  width: 100% !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  margin-right: auto !important;
+  margin-left: auto !important
 }
 .row {
 	display: flex;
@@ -10501,7 +10501,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 	background: linear-gradient(60deg, #ef5350, #e53935)
 }
 .card.bg-rose, .card .card-header-rose .card-icon, .card .card-header-rose .card-text, .card .card-header-rose:not(.card-header-icon):not(.card-header-text), .card.card-rotate.bg-rose .back, .card.card-rotate.bg-rose .front {
-	background: linear-gradient(60deg, #ec407a, #d81b60)
+  background: linear-gradient(60deg, #09a777, #09a777)
 }
 .card .card-header-primary .card-icon, .card .card-header-primary .card-text, .card .card-header-primary:not(.card-header-icon):not(.card-header-text) {
 	box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4)
@@ -12240,10 +12240,10 @@ opacity:0
 	background-color: #f44336;
 	box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(244,67,54,.4)
 }
-.sidebar[data-color=rose] li.active>a {
-	background-color: #e91e63;
-	box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(233,30,99,.4)
-}
+  .sidebar[data-color=rose] li.active > a {
+    background-color: #09a777;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(9,167,119,.4)
+  }
 .sidebar[data-color=white] li.active>a {
 	background-color: #fff;
 	box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px hsla(0,0%,100%,.4)
