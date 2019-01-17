@@ -25,17 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\assets\js\bootstrap-material-design.min.js" />
-    <None Remove="ClientApp\src\assets\js\jquery.min.js" />
-    <None Remove="ClientApp\src\assets\js\material-dashboard.js" />
-    <None Remove="ClientApp\src\assets\js\popper.min.js" />
+    <None Remove="ClientApp\src\app\aisle\createAisle.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\assets\js\bootstrap-material-design.min.js" />
-    <TypeScriptCompile Include="ClientApp\src\assets\js\jquery.min.js" />
-    <TypeScriptCompile Include="ClientApp\src\assets\js\material-dashboard.js" />
-    <TypeScriptCompile Include="ClientApp\src\assets\js\popper.min.js" />
+    <TypeScriptCompile Include="ClientApp\src\app\aisle\createAisle.component.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
