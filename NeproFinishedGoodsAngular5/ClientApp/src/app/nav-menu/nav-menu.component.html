@@ -91,7 +91,7 @@
       </li>
 
       <li class="nav-item ">
-        <a class="nav-link" href="#pagesExamples">
+        <a class="nav-link" data-toggle="collapse" href="#pagesExamples" >
           <i class="material-icons">
             <img src="../../assets/img/setup_icon.png" />
           </i>
@@ -101,19 +101,26 @@
           </p>
         </a>
 
-        <div id="pagesExamples">
+        <div class="collapse" id="pagesExamples">
           <ul class="nav">
             <!--<li class="nav-item ">
-                <a class="nav-link" href="pages/pricing.html">
-                    <i class="sidebar-mini"> <img src="img/aisle_icon.png" /> </i>
-                    <p class="sidebar-normal"> Aisle </p>
+      <a class="nav-link" href="pages/pricing.html">
+          <i class="sidebar-mini"> <img src="img/aisle_icon.png" /> </i>
+          <p class="sidebar-normal"> Aisle </p>
 
-                </a>
-            </li>-->
+      </a>
+  </li>-->
             <li class="nav-item" [routerLinkActive]='["link-active"]'>
               <a class="nav-link" [routerLink]='["/createAisle"]' (click)='collapse()'>
                 <i class="sidebar-mini"> <img src="../../assets/img/aisle_icon.png" /> </i>
                 <p class="sidebar-normal"> Aisle </p>
+              </a>
+            </li>
+
+            <li class="nav-item" [routerLinkActive]='["link-active"]'>
+              <a class="nav-link" [routerLink]='["/gridAisle"]' (click)='collapse()'>
+                <i class="sidebar-mini"> <img src="../../assets/img/aisle_icon.png" /> </i>
+                <p class="sidebar-normal">Grid Aisle </p>
               </a>
             </li>
 
