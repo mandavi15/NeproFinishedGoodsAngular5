@@ -1229,7 +1229,7 @@ pre code {
 	border-bottom-width: 2px
 }
 .table-striped tbody tr:nth-of-type(odd) {
-	background-color: rgba(0,0,0,.05)
+	background-color: #ffffff
 }
 .table-hover tbody tr:hover {
 	background-color: rgba(0,0,0,.075)
@@ -7418,9 +7418,9 @@ a.text-dark:focus, a.text-dark:hover {
 .form-check .form-check-input:focus+.form-check-sign .check:after {
 	opacity: .2
 }
-.form-check .form-check-input:checked+.form-check-sign .check {
-	background: #9c27b0
-}
+  .form-check .form-check-input:checked + .form-check-sign .check {
+    background: #09a777
+  }
 .form-check .form-check-input:checked+.form-check-sign .check:before {
 	color: #fff;
 	box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
@@ -10217,10 +10217,16 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 	max-width: 18px;
 	margin-top: -2px
 }
-.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
-	padding: 12px 8px;
-	vertical-align: middle;
-	border-color: #ddd
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td {
+  padding: 3px 12px;
+  vertical-align: middle;
+  border-color: #ddd
+}
+
+.table > thead > tr > th {
+  padding: 9px 12px;
+  vertical-align: middle;
+  border-color: #ddd;
 }
 .table thead tr th {
 	font-size: 1.063rem
@@ -10306,8 +10312,8 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .table-inverse td, .table-inverse th, .table-inverse thead th {
 	border-color: hsla(0,0%,100%,.06)
 }
-.table-striped>tbody>tr:nth-of-type(odd) {
-	background-color: #f9f9f9
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #C1F6E6;
 }
 .table.table-hover tbody tr:hover {
 	background-color: #f5f5f5
