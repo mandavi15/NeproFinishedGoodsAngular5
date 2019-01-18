@@ -7324,7 +7324,7 @@ a.text-dark:focus, a.text-dark:hover {
 	position: absolute;
 	width: 100%;
 	transform: none;
-	left: 0;
+	left: 3px;
 	top: 0;
 	height: 100%;
 	line-height: 41px;
@@ -8705,14 +8705,14 @@ textarea {
 	border-radius: 6px!important
 }
 .navbar {
-	border: 0;
-	border-radius: 3px;
-	padding: .625rem 0;
-	margin-bottom: 20px;
-	height: auto!important;
-	color: #555;
-	background-color: #fff!important;
-	box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15)
+  border: 0;
+  border-radius: 3px;
+  padding: 1.85rem 0;
+  margin-bottom: 20px;
+  height: auto !important;
+  color: #555;
+  background-color: #fff !important;
+  box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15)
 }
 .navbar .dropdown-item:focus, .navbar .dropdown-item:hover {
 	box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px hsla(0,0%,100%,.4);
@@ -17909,14 +17909,14 @@ a.fc-more:hover {
 	box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(156,39,176,.4)
 }
 .bootstrap-select .dropdown-item.active {
-	background: #9c27b0;
-	color: #fff
+  background: #09a777;
+  color: #fff
 }
 .bootstrap-select>select.bs-select-hidden, select.bs-select-hidden, select.selectpicker {
 	display: none!important
 }
 .bootstrap-select {
-	width: 220px \0
+	width: 220px
 }
 .bootstrap-select>.dropdown-toggle {
 	position: relative;
@@ -17959,7 +17959,7 @@ border-color:#28a745
 	width: auto!important
 }
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-	width: 220px
+	width: 100%
 }
 .bootstrap-select .dropdown-toggle:focus {
 	outline: thin dotted #333!important;
