@@ -13,7 +13,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateAisleComponent } from './setup/aisle/createAisle.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { GridAisleComponent } from './setup/grid-aisle/grid-aisle.component';
 import { CreateRackComponent } from './setup/create-rack/create-rack.component';
 import { CreateBinComponent } from './setup/create-bin/create-bin.component';
 import { CreateTruckTypesComponent } from './setup/create-truck-types/create-truck-types.component';
@@ -42,7 +41,6 @@ import { GridPickingLocationComponent } from './pick-to-load-process/grid-pickin
     CreateAisleComponent,
     CounterComponent,
     FetchDataComponent,
-    GridAisleComponent,
     CreateRackComponent,
     CreateBinComponent,
     CreateTruckTypesComponent,
@@ -70,7 +68,6 @@ import { GridPickingLocationComponent } from './pick-to-load-process/grid-pickin
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'createAisle', component: CreateAisleComponent },
-      { path: 'gridAisle', component: GridAisleComponent },
       { path: 'create-rack', component: CreateRackComponent },
       { path: 'create-bin', component: CreateBinComponent },
       { path: 'create-truck-type', component: CreateTruckTypesComponent },
