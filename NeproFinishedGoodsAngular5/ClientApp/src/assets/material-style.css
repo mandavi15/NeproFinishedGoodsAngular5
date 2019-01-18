@@ -9811,7 +9811,7 @@ legend {
 	margin-bottom: 30px
 }
 .footer {
-	padding: .3375rem 0;
+	padding: 1rem 0;
 	text-align: center;
 	display: flex
 }
@@ -10592,7 +10592,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 	z-index: 3!important
 }
 .card .card-header .card-title {
-	margin-bottom: 3px
+	margin-bottom: 0px
 }
 .card .card-header .card-category {
 	margin: 0
@@ -10699,14 +10699,14 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 	margin-top: -20px;
 	padding: 15px
 }
-.card [class*=card-header-] .card-icon, .card [class*=card-header-] .card-text {
-	border-radius: 3px;
-	background-color: #999;
-	padding: 15px;
-	margin-top: -20px;
-	margin-right: 15px;
-	float: left
-}
+  .card [class*=card-header-] .card-icon, .card [class*=card-header-] .card-text {
+    border-radius: 3px;
+    background-color: #999;
+    padding: 10px 15px 8px;
+    margin-top: -20px;
+    margin-right: 15px;
+    float: left
+  }
 .card [class*=card-header-] .card-text {
 	float: none;
 	display: inline-block;
@@ -12030,7 +12030,7 @@ opacity:0
     width: 30px;
     text-align: center;
     color: #a9afbb;
-    margin-top: -8px !important;
+    margin-top: -6px !important;
   }
 .sidebar .nav li .dropdown-menu a, .sidebar .nav li a {
 	margin: 10px 15px 0;
@@ -19237,7 +19237,7 @@ transform:rotate(0)
 footer {
 	position: fixed;
 	bottom: 0px;
-	width: 80%;
+	width: 82%;
 	background: #fff;
 	z-index: 999;
 }
