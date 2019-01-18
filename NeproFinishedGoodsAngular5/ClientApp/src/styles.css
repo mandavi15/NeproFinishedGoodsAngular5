@@ -20,3 +20,6 @@
   -webkit-font-feature-settings: 'liga' !important;
   -webkit-font-smoothing: antialiased !important;
 }
+button .fa {
+  padding-right: 7px;
+}
