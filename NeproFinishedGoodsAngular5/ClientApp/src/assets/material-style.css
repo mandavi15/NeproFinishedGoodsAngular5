@@ -9122,8 +9122,9 @@ html * {
 .h3, .h4, h3, h4 {
 	line-height: 1.4em
 }
+
 .h4, h4 {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	font-weight: 300
 }
 .h5, h5 {
