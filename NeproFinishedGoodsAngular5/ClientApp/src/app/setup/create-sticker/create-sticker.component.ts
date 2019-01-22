@@ -13,6 +13,7 @@ export class CreateStickerComponent {
   }
 
 
+
   columnDefs = [
     { headerName: 'Make', field: 'make', sortable: true, filter: true },
     { headerName: 'Model', field: 'model', sortable: true, filter: true },
