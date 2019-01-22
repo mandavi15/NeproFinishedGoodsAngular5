@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'createAisle',
   templateUrl: './createAisle.component.html',
 })
-export class CreateAisleComponent {
+export class CreateAisleComponent implements AfterViewInit  {
 
+  ngAfterViewInit() {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.innerHTML = "console.log('done');"; //inline script
+    s.src = "assets/js/bootstrap-selectpicker.js"; //external script
+  }
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 100 },
     { headerName: 'Site', field: 'site', sortable: true, filter: true, width: 300  },
