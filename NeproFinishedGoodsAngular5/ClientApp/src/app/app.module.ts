@@ -57,6 +57,7 @@ import { GridPickingLocationComponent } from './pick-to-load-process/grid-pickin
     GridPickingListComponent,
     GridPickingLocationComponent,
     CreateStillageComponent
+  
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
