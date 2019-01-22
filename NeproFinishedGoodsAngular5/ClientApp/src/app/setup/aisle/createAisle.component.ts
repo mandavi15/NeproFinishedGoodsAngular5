@@ -7,14 +7,17 @@ import { Component } from '@angular/core';
 export class CreateAisleComponent {
 
   columnDefs = [
-    { headerName: 'Make', field: 'make', sortable: true, filter: true },
-    { headerName: 'Model', field: 'model', sortable: true, filter: true },
-    { headerName: 'Price', field: 'price', sortable: true, filter: true }
+    { headerName: "All", checkboxSelection: true, field: "all", width: 100 },
+    { headerName: 'Site', field: 'site', sortable: true, filter: true, width: 300  },
+    { headerName: 'WareHouse', field: 'warehouse', sortable: true, filter: true, width: 300  },
+    { headerName: 'Location', field: 'location', sortable: true, filter: true, width: 282  }
   ];
 
   rowData = [
-    { make: 'Toyota', model: 'Celica', price: 35000 },
-    { make: 'Ford', model: 'Mondeo', price: 32000 },
-    { make: 'Porsche', model: 'Boxter', price: 72000 }
+    { all: " ", checkboxSelection: true, site: 'Ghaziabad', warehouse: 'Warehouse 1', location: 'Location 1' },
+    { all: " ", checkboxSelection: true, site: 'Noida', warehouse: 'Warehouse 2', location: 'Location 2' },
+    { all: " ", checkboxSelection: true, site: 'Delhi', warehouse: 'Warehouse 3', location: 'Location 3' },
+    { all: " ", checkboxSelection: true, site: 'Gurgaon', warehouse: 'Warehouse 4', location: 'Location 4' },
+    { all: " ", checkboxSelection: true, site: 'Agra', warehouse: 'Warehouse 5', location: 'Location 5' }
   ];
 }

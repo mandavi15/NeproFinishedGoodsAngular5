@@ -3749,12 +3749,12 @@ background-position:0 0
 	line-height: 1;
 	color: #000;
 	text-shadow: 0 1px 0 #fff;
-	opacity: .5
+	
 }
 .close:focus, .close:hover {
-	color: #000;
+	color: #ffffff;
 	text-decoration: none;
-	opacity: .75
+	opacity: 1
 }
 .close:not(:disabled):not(.disabled) {
 	cursor: pointer
@@ -9342,18 +9342,20 @@ h2.title {
 	outline: none
 }
 .modal-dialog .modal-header {
-	border-bottom: none;
-	padding: 24px 24px 0
+  border-bottom: none;
+  padding: 10px 0px 10px 0px;
+  background-color: #089a6e;
+  color: white;
 }
-.modal-dialog .modal-header .modal-title {
-	text-align: center;
-	width: 100%
-}
-.modal-dialog .modal-header .close {
-	position: absolute;
-	top: 15px;
-	right: 20px
-}
+  .modal-dialog .modal-header .modal-title {
+    margin-left: 1%;
+    width: 100%
+  }
+  .modal-dialog .modal-header .close {
+    position: absolute;
+    top: 9px;
+    right: 19px;
+  }
 .modal-dialog .modal-body {
 	padding: 24px 24px 16px
 }
@@ -9430,11 +9432,11 @@ h2.title {
 	padding-top: 0
 }
 .modal .modal-header .close {
-	color: #999
+	color: #ffffff
 }
-.modal .modal-header .close:focus, .modal .modal-header .close:hover {
-	opacity: 1
-}
+  .modal .modal-header .close:focus, .modal .modal-header .close:hover {
+    color: #ffffff
+  }
 .modal .modal-header .close i {
 	font-size: 16px
 }
