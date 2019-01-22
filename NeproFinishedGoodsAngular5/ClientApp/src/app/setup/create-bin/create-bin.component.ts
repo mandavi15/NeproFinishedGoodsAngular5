@@ -9,12 +9,13 @@ import { Component } from '@angular/core';
 export class CreateBinComponent {
    
   columnDefs = [
-    { headerName: "All", checkboxSelection: true, field: "all", width: 100 },
+    { headerName: "All", checkboxSelection: true,  field: "all", width: 100 },
     { headerName: 'Site', field: 'site', sortable: true, filter: true, width: 180 },
     { headerName: 'WareHouse', field: 'warehouse', sortable: true, filter: true, width: 180 },
     { headerName: 'Location', field: 'location', sortable: true, filter: true, width: 180 },
     { headerName: 'Row Name', field: 'RowName', sortable: true, filter: true, width: 180 },
     { headerName: 'Bin Name', field: 'BinName', sortable: true, filter: true, width: 175 },
+    
   ];
 
   rowData = [

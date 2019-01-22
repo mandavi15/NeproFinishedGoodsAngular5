@@ -34,21 +34,21 @@ export class GridPickingListComponent {
     { headerName: 'Item Description', field: 'ItemDescription', sortable: true, filter: true, width: 170 },
     { headerName: 'Remaining Quantity', field: 'RemainingQuantity', sortable: true, filter: true, width: 150 },
     { headerName: 'Unit', field: 'Unit', sortable: true, filter: true, width: 150},
-    { headerName: 'To Be Delivered Quantity', field: 'ToBeDeliveredQuantity', sortable: true, filter: true, width: 215 }
+    { headerName: 'To Be Delivered Quantity', field: 'ToBeDeliveredQuantity', sortable: true, filter: true, width: 215, template: "<input class='k-textbox'/>" }
 
 
   ];
 
   salesorder1rowData = [
-    { all: 1, Item: 'Item 1', ItemDescription: 'Item 1 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 2, Item: 'Item 2', ItemDescription: 'Item 2 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 3, Item: 'Item 3', ItemDescription: 'Item 3 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 4, Item: 'Item 4', ItemDescription: 'Item 4 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 5, Item: 'Item 5', ItemDescription: 'Item 5 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 6, Item: 'Item 6', ItemDescription: 'Item 6 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 7, Item: 'Item 7', ItemDescription: 'Item 7 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 8, Item: 'Item 8', ItemDescription: 'Item 8 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
-    { all: 9, Item: 'Item 9', ItemDescription: 'Item 9 Description', RemainingQuantity: '20', Unit: 'Kg', ToBeDeliveredQuantity: '<input type="text" />' },
+    { all: 1, Item: 'Item 1', ItemDescription: 'Item 1 Description', RemainingQuantity: '20', Unit: 'Kg' },
+    { all: 2, Item: 'Item 2', ItemDescription: 'Item 2 Description', RemainingQuantity: '20', Unit: 'Kg'},
+    { all: 3, Item: 'Item 3', ItemDescription: 'Item 3 Description', RemainingQuantity: '20', Unit: 'Kg'},
+    { all: 4, Item: 'Item 4', ItemDescription: 'Item 4 Description', RemainingQuantity: '20', Unit: 'Kg' },
+    { all: 5, Item: 'Item 5', ItemDescription: 'Item 5 Description', RemainingQuantity: '20', Unit: 'Kg'},
+    { all: 6, Item: 'Item 6', ItemDescription: 'Item 6 Description', RemainingQuantity: '20', Unit: 'Kg'},
+    { all: 7, Item: 'Item 7', ItemDescription: 'Item 7 Description', RemainingQuantity: '20', Unit: 'Kg' },
+    { all: 8, Item: 'Item 8', ItemDescription: 'Item 8 Description', RemainingQuantity: '20', Unit: 'Kg' },
+    { all: 9, Item: 'Item 9', ItemDescription: 'Item 9 Description', RemainingQuantity: '20', Unit: 'Kg' },
 
   ];
 
