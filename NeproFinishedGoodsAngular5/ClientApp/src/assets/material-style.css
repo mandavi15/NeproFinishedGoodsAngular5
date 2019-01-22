@@ -1,7 +1,14 @@
+.k-textbox {
+  height: 80%;
+}
+
+
+
 .sidebar {
-  background-image: url('img/sidebar-1.jpg') !important; 
+  background-image: url('img/sidebar-1.jpg') !important;
   background-position: center !important;
 }
+
   .sidebar .logo {
     background: rgb(174, 173, 173) !important;
   }
@@ -2205,8 +2212,9 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 	width: 100%
 }
 .fade {
-	opacity: 0;
-	transition: opacity .15s linear
+  opacity: 0;
+  transition: opacity .15s linear;
+  background: rgba(0,0,0,0.5);
 }
 .fade.show {
 	opacity: 1
@@ -3749,12 +3757,12 @@ background-position:0 0
 	line-height: 1;
 	color: #000;
 	text-shadow: 0 1px 0 #fff;
-	
+	opacity: .5
 }
 .close:focus, .close:hover {
-	color: #ffffff;
+	color: #000;
 	text-decoration: none;
-	opacity: 1
+	opacity: .75
 }
 .close:not(:disabled):not(.disabled) {
 	cursor: pointer
@@ -3931,10 +3939,10 @@ button.close {
 	border-top-left-radius: .3rem;
 	border-top-right-radius: .3rem
 }
-.modal-header .close {
-	padding: 1rem;
-	margin: -1rem -1rem -1rem auto
-}
+  .modal-header .close {
+    padding: 0.8rem;
+    margin: -1rem -1rem -1rem auto
+  }
 .modal-title {
 	margin-bottom: 0;
 	line-height: 1.5
@@ -9343,18 +9351,23 @@ h2.title {
 }
 .modal-dialog .modal-header {
   border-bottom: none;
-  padding: 10px 0px 10px 0px;
-  background-color: #089a6e;
-  color: white;
+  padding: 8px 24px 8px 24px;
+  background: #09a777;
 }
-  .modal-dialog .modal-header .modal-title {
-    margin-left: 1%;
-    width: 100%
-  }
+.modal-dialog .modal-header .modal-title {
+	text-align: center;
+	width: 100%
+}
   .modal-dialog .modal-header .close {
     position: absolute;
-    top: 9px;
-    right: 19px;
+    top: 10px;
+    background: #fff;
+    right: 7px;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: -2px 3px 2px #034e37;
   }
 .modal-dialog .modal-body {
 	padding: 24px 24px 16px
@@ -9432,11 +9445,11 @@ h2.title {
 	padding-top: 0
 }
 .modal .modal-header .close {
-	color: #ffffff
+	color: #999
 }
-  .modal .modal-header .close:focus, .modal .modal-header .close:hover {
-    color: #ffffff
-  }
+.modal .modal-header .close:focus, .modal .modal-header .close:hover {
+	opacity: 1
+}
 .modal .modal-header .close i {
 	font-size: 16px
 }
@@ -11952,7 +11965,7 @@ opacity:0
     width: 260px;
     z-index: 4;
     padding-bottom: 30px;
-    background: #01010191;
+    background: #010101;
   }
 .sidebar .sidebar-wrapper .dropdown .dropdown-backdrop {
 	display: none!important

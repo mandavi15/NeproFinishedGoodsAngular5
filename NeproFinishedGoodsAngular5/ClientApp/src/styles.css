@@ -32,3 +32,20 @@ button .fa {
 .ag-theme-balham .ag-row-odd {
   background-color: #c1f6e6 !important;
 }
+.ag-theme-balham .ag-header {
+  color: #3e3e3e !important;
+}
+.ag-theme-balham .ag-ltr .ag-cell-focus {
+  border: 1px solid #d9dbdc;
+}
+.modalHead {
+ text-align:left !important;
+ color:#fff
+}
+.cross {
+  color: #015a3f;
+  font-weight: bold;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
