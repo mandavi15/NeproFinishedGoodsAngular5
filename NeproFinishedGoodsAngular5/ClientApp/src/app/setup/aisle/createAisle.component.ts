@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './createAisle.component.html',
 })
 export class CreateAisleComponent {
-
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 100 },
     { headerName: 'Site', field: 'site', sortable: true, filter: true, width: 300  },

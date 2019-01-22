@@ -1,7 +1,8 @@
 <div class="content">
   <div class="container-fluid">
     <div class="card-body pull-right p-1">
-      <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-print" aria-hidden="true"></i>Print</button>
+      <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-print" aria-hidden="true"></i>Print History</button>
+      <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal1"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Sticker Activity History</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
@@ -20,125 +21,130 @@
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-striped">
-                <thead style="background-color: #eceaea;">
-                  <tr>
-                    <th>All</th>
-                    <th>Sticker Code</th>
-                    <th>Sticker For</th>
-                    <th>Stillage / Truck</th>
-                    <th>Created By</th>
-                    <th>Created On</th>
-                    <th>Printed By</th>
-                    <th>Printed On</th>
 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
+              <ag-grid-angular style="width:100%; height: auto"
+                               class="ag-theme-balham"
+                               [rowData]="rowData"
+                               [columnDefs]="columnDefs"></ag-grid-angular>
+              <!--<table class="table table-striped">
+    <thead style="background-color: #eceaea;">
+      <tr>
+        <th>All</th>
+        <th>Sticker Code</th>
+        <th>Sticker For</th>
+        <th>Stillage / Truck</th>
+        <th>Created By</th>
+        <th>Created On</th>
+        <th>Printed By</th>
+        <th>Printed On</th>
 
-                    <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="" checked>
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td>SC0001</td>
-                    <td>UP-14-BZ-5846</td>
-                    <td>SC0001</td>
-                    <td>Rahul</td>
-                    <td>8459267584</td>
-                    <td>abc@gmail.com</td>
-                    <td>E-210, Second Floor</td>
-                  </tr>
-                  <tr>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
 
-                    <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="" checked>
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td>SC0002</td>
-                    <td>UP-14-BZ-5846</td>
-                    <td>SC0001</td>
-                    <td>Rahul</td>
-                    <td>8459267584</td>
-                    <td>abc@gmail.com</td>
-                    <td>E-210, Second Floor</td>
-                  </tr>
-                  <tr>
+        <td>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" checked>
+              <span class="form-check-sign">
+                <span class="check"></span>
+              </span>
+            </label>
+          </div>
+        </td>
+        <td>SC0001</td>
+        <td>UP-14-BZ-5846</td>
+        <td>SC0001</td>
+        <td>Rahul</td>
+        <td>8459267584</td>
+        <td>abc@gmail.com</td>
+        <td>E-210, Second Floor</td>
+      </tr>
+      <tr>
 
-                    <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="" checked>
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td>SC0003</td>
-                    <td>UP-14-BZ-5846</td>
-                    <td>SC0001</td>
-                    <td>Rahul</td>
-                    <td>8459267584</td>
-                    <td>abc@gmail.com</td>
-                    <td>E-210, Second Floor</td>
-                  </tr>
-                  <tr>
+        <td>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" checked>
+              <span class="form-check-sign">
+                <span class="check"></span>
+              </span>
+            </label>
+          </div>
+        </td>
+        <td>SC0002</td>
+        <td>UP-14-BZ-5846</td>
+        <td>SC0001</td>
+        <td>Rahul</td>
+        <td>8459267584</td>
+        <td>abc@gmail.com</td>
+        <td>E-210, Second Floor</td>
+      </tr>
+      <tr>
 
-                    <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
-                        </label>
-                      </div>
-                    </td>
-                    <td>SC0004</td>
-                    <td>UP-14-BZ-5846</td>
-                    <td>SC0001</td>
-                    <td>Rahul</td>
-                    <td>8459267584</td>
-                    <td>abc@gmail.com</td>
-                    <td>E-210, Second Floor</td>
-                  </tr>
-                  <tr>
+        <td>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="" checked>
+              <span class="form-check-sign">
+                <span class="check"></span>
+              </span>
+            </label>
+          </div>
+        </td>
+        <td>SC0003</td>
+        <td>UP-14-BZ-5846</td>
+        <td>SC0001</td>
+        <td>Rahul</td>
+        <td>8459267584</td>
+        <td>abc@gmail.com</td>
+        <td>E-210, Second Floor</td>
+      </tr>
+      <tr>
 
-                    <td>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input class="form-check-input" type="checkbox" value="">
-                          <span class="form-check-sign">
-                            <span class="check"></span>
-                          </span>
+        <td>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              <span class="form-check-sign">
+                <span class="check"></span>
+              </span>
+            </label>
+          </div>
+        </td>
+        <td>SC0004</td>
+        <td>UP-14-BZ-5846</td>
+        <td>SC0001</td>
+        <td>Rahul</td>
+        <td>8459267584</td>
+        <td>abc@gmail.com</td>
+        <td>E-210, Second Floor</td>
+      </tr>
+      <tr>
 
-                        </label>
-                      </div>
-                    </td>
-                    <td>SC0005</td>
-                    <td>UP-14-BZ-5846</td>
-                    <td>SC0001</td>
-                    <td>Rahul</td>
-                    <td>8459267584</td>
-                    <td>abc@gmail.com</td>
-                    <td>E-210, Second Floor</td>
-                  </tr>
-                  <tr></tr>
-                </tbody>
-              </table>
+        <td>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="">
+              <span class="form-check-sign">
+                <span class="check"></span>
+              </span>
+
+            </label>
+          </div>
+        </td>
+        <td>SC0005</td>
+        <td>UP-14-BZ-5846</td>
+        <td>SC0001</td>
+        <td>Rahul</td>
+        <td>8459267584</td>
+        <td>abc@gmail.com</td>
+        <td>E-210, Second Floor</td>
+      </tr>
+      <tr></tr>
+    </tbody>
+  </table>-->
             </div>
           </div>
         </div>
@@ -184,9 +190,9 @@
                         <div class="col-lg-8 col-md-9 col-sm-12">
                           <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
                             <option disabled> Select</option>
-                            <option value="2">1 </option>
-                            <option value="3">2</option>
-                            <option value="4">3</option>
+                            <option value="2">Owned </option>
+                            <option value="3">Rented</option>
+                            <option value="4">Third Party</option>
 
                           </select>
                         </div>
@@ -215,17 +221,40 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <button type="button" class="close" data-dismiss="modal"><span class="cross">&times;</span></button>
+        <h4 class="modal-title modalHead">Print History</h4>
       </div>
       <div class="modal-body">
         <ag-grid-angular style="width:100%; height: auto"
                          class="ag-theme-balham"
-                         [rowData]="rowData"
-                         [columnDefs]="columnDefs"></ag-grid-angular>
+                         [rowData]="rowData1"
+                         [columnDefs]="columnDefs1"></ag-grid-angular>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="cross">&times;</span></button>
+        <h4 class="modal-title modalHead">Sticker Activity History</h4>
+      </div>
+      <div class="modal-body">
+        <ag-grid-angular style="width:100%; height: auto"
+                         class="ag-theme-balham"
+                         [rowData]="rowData2"
+                         [columnDefs]="columnDefs2"></ag-grid-angular>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Close</button>
       </div>
     </div>
 
