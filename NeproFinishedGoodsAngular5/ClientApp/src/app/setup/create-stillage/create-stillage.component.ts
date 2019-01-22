@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-create-stillage',
-    templateUrl: './create-stillage.component.html'
-   
+  selector: 'app-create-stillage',
+  templateUrl: './create-stillage.component.html'
+
 })
 /** create-stillage component*/
 export class CreateStillageComponent {
@@ -12,7 +12,7 @@ export class CreateStillageComponent {
     { headerName: 'WareHouse', field: 'WareHouse', sortable: true, filter: true, width: 280 },
     { headerName: 'Stillage ID', field: 'StillageID', sortable: true, filter: true, width: 280 },
     { headerName: 'Sticker Code', field: 'StickerCode', sortable: true, filter: true, width: 275 }
-    
+
 
   ];
 
@@ -25,3 +25,5 @@ export class CreateStillageComponent {
     { all: " ", checkboxSelection: true, WareHouse: 'WareHouse 6', StillageID: 'Stillage 6', StickerCode: 'SC0006' },
     { all: " ", checkboxSelection: true, WareHouse: 'WareHouse 7', StillageID: 'Stillage 7', StickerCode: 'SC0007' },
     { all: " ", checkboxSelection: true, WareHouse: 'WareHouse 8', StillageID: 'Stillage 8', StickerCode: 'SC0008' },
+  ];
+}
