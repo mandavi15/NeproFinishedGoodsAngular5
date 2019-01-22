@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 /** create-truck-types component*/
 export class CreateTruckTypesComponent {
-    /** create-truck-types ctor */
-    constructor() {
+  columnDefs = [
+    { headerName: "All", checkboxSelection: true, field: "all", width: 150 },
+    { headerName: 'S.No.', field: 'site', sortable: true, filter: true, width: 418 },
+    { headerName: 'All Vehicle Type', field: 'AllVehicleType', sortable: true, filter: true, width: 420 }
+   
+  ];
 
-    }
+  rowData = [
+    { all: " ", checkboxSelection: true, site: 'Ghaziabad', AllVehicleType: 'Van' },
+    { all: " ", checkboxSelection: true, site: 'Noida', AllVehicleType: 'Truck'},
+    { all: " ", checkboxSelection: true, site: 'Delhi', AllVehicleType: 'Mini Truck' },
+    { all: " ", checkboxSelection: true, site: 'Gurgaon', AllVehicleType: 'Truck' },
+    { all: " ", checkboxSelection: true, site: 'Agra', AllVehicleType: 'Van' }
+  ];
 }
