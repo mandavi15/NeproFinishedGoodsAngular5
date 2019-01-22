@@ -1,6 +1,10 @@
-/*@import url('../../node_modules/ag-grid-community/dist/styles/ag-grid.css');
-@import url('../../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css');*/
-
+.sidebar {
+  background-image: url('img/sidebar-1.jpg') !important; 
+  background-position: center !important;
+}
+  .sidebar .logo {
+    background: rgb(174, 173, 173) !important;
+  }
 .card {
   font-size: .75rem
 }
@@ -11939,14 +11943,15 @@ opacity:0
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent
 }
-.sidebar .sidebar-wrapper {
-	position: relative;
-	height: calc(100vh - 75px);
-	overflow: auto;
-	width: 260px;
-	z-index: 4;
-	padding-bottom: 30px
-}
+  .sidebar .sidebar-wrapper {
+    position: relative;
+    height: calc(100vh - 75px);
+    overflow: auto;
+    width: 260px;
+    z-index: 4;
+    padding-bottom: 30px;
+    background: #01010191;
+  }
 .sidebar .sidebar-wrapper .dropdown .dropdown-backdrop {
 	display: none!important
 }
