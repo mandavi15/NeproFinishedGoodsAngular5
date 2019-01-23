@@ -1,3 +1,17 @@
+.k-textbox {
+  height: 80%;
+}
+
+
+
+.sidebar {
+  background-image: url('img/sidebar-1.jpg') !important;
+  background-position: center !important;
+}
+
+  .sidebar .logo {
+    background: rgb(174, 173, 173) !important;
+  }
 .card {
   font-size: .75rem
 }
@@ -2198,8 +2212,9 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 	width: 100%
 }
 .fade {
-	opacity: 0;
-	transition: opacity .15s linear
+  opacity: 0;
+  transition: opacity .15s linear;
+  background: rgba(0,0,0,0.5);
 }
 .fade.show {
 	opacity: 1
@@ -3924,10 +3939,10 @@ button.close {
 	border-top-left-radius: .3rem;
 	border-top-right-radius: .3rem
 }
-.modal-header .close {
-	padding: 1rem;
-	margin: -1rem -1rem -1rem auto
-}
+  .modal-header .close {
+    padding: 0.8rem;
+    margin: -1rem -1rem -1rem auto
+  }
 .modal-title {
 	margin-bottom: 0;
 	line-height: 1.5
@@ -9335,18 +9350,25 @@ h2.title {
 	outline: none
 }
 .modal-dialog .modal-header {
-	border-bottom: none;
-	padding: 24px 24px 0
+  border-bottom: none;
+  padding: 8px 24px 8px 24px;
+  background: #09a777;
 }
 .modal-dialog .modal-header .modal-title {
 	text-align: center;
 	width: 100%
 }
-.modal-dialog .modal-header .close {
-	position: absolute;
-	top: 15px;
-	right: 20px
-}
+  .modal-dialog .modal-header .close {
+    position: absolute;
+    top: 10px;
+    background: #fff;
+    right: 7px;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: -2px 3px 2px #034e37;
+  }
 .modal-dialog .modal-body {
 	padding: 24px 24px 16px
 }
@@ -11936,14 +11958,15 @@ opacity:0
 	border-right: 4px solid transparent;
 	border-left: 4px solid transparent
 }
-.sidebar .sidebar-wrapper {
-	position: relative;
-	height: calc(100vh - 75px);
-	overflow: auto;
-	width: 260px;
-	z-index: 4;
-	padding-bottom: 30px
-}
+  .sidebar .sidebar-wrapper {
+    position: relative;
+    height: calc(100vh - 75px);
+    overflow: auto;
+    width: 260px;
+    z-index: 4;
+    padding-bottom: 30px;
+    background: #010101;
+  }
 .sidebar .sidebar-wrapper .dropdown .dropdown-backdrop {
 	display: none!important
 }

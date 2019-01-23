@@ -23,3 +23,29 @@
 button .fa {
   padding-right: 7px;
 }
+.ag-theme-balham .ag-root {
+  border:0 !important
+}
+.ag-header-viewport, .ag-floating-top-viewport, .ag-body-viewport, .ag-pinned-left-cols-viewport, .ag-center-cols-viewport, .ag-pinned-right-cols-viewport, .ag-floating-bottom-viewport, .ag-body-horizontal-scroll-viewport, .ag-virtual-list-viewport {
+  background: #f0eeee;
+}
+.ag-theme-balham .ag-row-odd {
+  background-color: #c1f6e6 !important;
+}
+.ag-theme-balham .ag-header {
+  color: #3e3e3e !important;
+}
+.ag-theme-balham .ag-ltr .ag-cell-focus {
+  border: 1px solid #d9dbdc;
+}
+.modalHead {
+ text-align:left !important;
+ color:#fff
+}
+.cross {
+  color: #015a3f;
+  font-weight: bold;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}

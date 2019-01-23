@@ -1,1 +1,396 @@
-﻿<div style="border: 1px solid red">grid-picking-list Component</div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="card-body pull-right p-1">
+      <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-text">
+              <h4 class="card-title">All Picking Lists</h4>
+            </div>
+            <h4 class="card-title"></h4>
+          </div>
+          <div class="card-body">
+            <ag-grid-angular style="width:100%; height: auto"
+                             class="ag-theme-balham"
+                             [rowData]="rowData"
+                             [columnDefs]="columnDefs"></ag-grid-angular>
+            <!--<div class="table-responsive">
+    <table class="table table-striped">
+      <thead style="background-color: #eceaea;">
+        <tr>
+          <th>S.No.</th>
+          <th>Pick List Number</th>
+          <th>Created By</th>
+          <th>Created On</th>
+          <th>Customer Name</th>
+          <th>Status</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+          <td>1</td>
+          <td>PL0001</td>
+          <td>Amar Singh</td>
+          <td>25/12/2018</td>
+          <td>Rahul</td>
+          <td>Created</td>
+
+        </tr>
+        <tr>
+
+          <td>
+            2
+          </td>
+          <td>PL0002</td>
+          <td>Amar Singh</td>
+          <td>25/12/2018</td>
+          <td>Rahul</td>
+          <td>Picked</td>
+
+        </tr>
+        <tr>
+
+          <td>
+            3
+          </td>
+          <td>PL0003</td>
+          <td>Amar Singh</td>
+          <td>25/12/2018</td>
+          <td>Rahul</td>
+          <td>Created</td>
+
+        </tr>
+        <tr>
+
+          <td>
+            4
+          </td>
+          <td>PL0004</td>
+          <td>Amar Singh</td>
+          <td>25/12/2018</td>
+          <td>Rahul</td>
+          <td>Created</td>
+
+        </tr>
+        <tr>
+
+          <td>
+            5
+          </td>
+          <td>PL0005</td>
+          <td>Amar Singh</td>
+          <td>25/12/2018</td>
+          <td>Rahul</td>
+          <td>
+            Picked
+          </td>
+
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+  </div>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+
+      <div class="clearfix"></div>
+      <div class="row mb-5">
+        <div class="col-md-12">
+          <div class="card ">
+            <div class="card-header card-header-rose card-header-text">
+              <div class="card-text">
+                <h4 class="card-title">Create Picking List</h4>
+              </div>
+            </div>
+            <div class="card-body ">
+              <form method="get" class="form-horizontal">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Customer Name</label>
+                      <div class="col-lg-8 col-md-9 col-sm-12">
+                        <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                          <option disabled> Select</option>
+                          <option value="2">Amar Singh </option>
+                          <option value="3">Fateh</option>
+                          <option value="4">Raj</option>
+
+                        </select>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+                  </div>
+
+
+
+                  <!--<div class="col-md-6">
+
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Sticker Code</label>
+                      <div class="col-sm-8">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>-->
+
+
+                </div>
+              </form>
+              <div class="row mt-4">
+                <div class="col-md-6 p-0">
+                  <h5 style="color: #09a777;">Sales Order 1</h5>
+                </div>
+                <div class="col-md-6">
+
+
+
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="">
+
+                    <div class="" style="border: 1px solid #09a777;">
+                      <ag-grid-angular style="width:100%; height: auto"
+                                       class="ag-theme-balham"
+                                       [rowData]="salesorder1rowData"
+                                       [columnDefs]="salesorder1columnDefs"></ag-grid-angular>
+                      <!--<div class="table-responsive">
+    <table class="table table-striped mb-0">
+      <thead style="background-color: #eceaea;">
+        <tr>
+          <th>S.No.</th>
+          <th>Item</th>
+          <th>Item Description</th>
+          <th>Remaining Quantity</th>
+          <th>Unit</th>
+          <th>To Be Delivered Quantity</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+          <td>1</td>
+          <td>Item 1</td>
+          <td>Item 1 Description</td>
+          <td>20</td>
+          <td>Kg</td>
+          <td><input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            2
+          </td>
+          <td>Item 2</td>
+          <td>Item 2 Description</td>
+          <td>10</td>
+          <td>Kg</td>
+          <td><input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            3
+          </td>
+          <td>Item 3</td>
+          <td>Item 3 Description</td>
+          <td>15</td>
+          <td>Kg</td>
+          <td><input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            4
+          </td>
+          <td>Item 4</td>
+          <td>Item 4 Description</td>
+          <td>25</td>
+          <td>Kg</td>
+          <td><input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            5
+          </td>
+          <td>Item 5</td>
+          <td>Item 5 Description</td>
+          <td>26</td>
+          <td>Kg</td>
+          <td>
+            <input type="text" />
+          </td>
+
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+  </div>-->
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row mt-4">
+                <div class="col-md-6 p-0">
+                  <h5 style="color: #09a777;">Sales Order 2</h5>
+                </div>
+                <div class="col-md-6">
+
+
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="">
+
+                    <div class="" style="border: 1px solid #09a777;">
+                      <ag-grid-angular style="width:100%; height: auto"
+                                       class="ag-theme-balham"
+                                       [rowData]="salesorder2rowData"
+                                       [columnDefs]="salesorder2columnDefs"></ag-grid-angular>
+                      <!--<div class="table-responsive">
+    <table class="table table-striped mb-0">
+      <thead style="background-color: #eceaea;">
+        <tr>
+          <th>S.No.</th>
+          <th>Item</th>
+          <th>Item Description</th>
+          <th>Remaining Quantity</th>
+          <th>Unit</th>
+          <th>To Be Delivered Quantity</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+
+          <td>1</td>
+          <td>Item 1</td>
+          <td>Item 1 Description</td>
+          <td>20</td>
+          <td>Kg</td>
+          <td> <input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            2
+          </td>
+          <td>Item 2</td>
+          <td>Item 2 Description</td>
+          <td>10</td>
+          <td>Kg</td>
+          <td> <input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            3
+          </td>
+          <td>Item 3</td>
+          <td>Item 3 Description</td>
+          <td>15</td>
+          <td>Kg</td>
+          <td> <input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            4
+          </td>
+          <td>Item 4</td>
+          <td>Item 4 Description</td>
+          <td>25</td>
+          <td>Kg</td>
+          <td> <input type="text" /></td>
+
+        </tr>
+        <tr>
+
+          <td>
+            5
+          </td>
+          <td>Item 5</td>
+          <td>Item 5 Description</td>
+          <td>26</td>
+          <td>Kg</td>
+          <td>
+            <input type="text" />
+          </td>
+
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+  </div>-->
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
