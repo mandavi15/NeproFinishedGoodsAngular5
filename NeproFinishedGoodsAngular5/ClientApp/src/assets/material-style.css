@@ -11965,7 +11965,7 @@ opacity:0
     width: 260px;
     z-index: 4;
     padding-bottom: 30px;
-    background: #010101;
+    background: #010101d1 !important;
   }
 .sidebar .sidebar-wrapper .dropdown .dropdown-backdrop {
 	display: none!important
