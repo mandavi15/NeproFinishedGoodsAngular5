@@ -1,3 +1,9 @@
+.k-textbox {
+  height: 80%;
+}
+
+
+
 .sidebar {
   background-image: url('img/sidebar-1.jpg') !important;
   background-position: center !important;
