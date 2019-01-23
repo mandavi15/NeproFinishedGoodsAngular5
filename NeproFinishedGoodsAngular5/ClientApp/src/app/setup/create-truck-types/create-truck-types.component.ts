@@ -9,16 +9,16 @@ import { Component } from '@angular/core';
 export class CreateTruckTypesComponent {
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 150 },
-    { headerName: 'S.No.', field: 'site', sortable: true, filter: true, width: 418 },
+    { headerName: 'S.No.', field: 'sno', sortable: true, filter: true, width: 418 },
     { headerName: 'All Vehicle Type', field: 'AllVehicleType', sortable: true, filter: true, width: 420 }
    
   ];
 
   rowData = [
-    { all: " ", checkboxSelection: true, site: 'Ghaziabad', AllVehicleType: 'Van' },
-    { all: " ", checkboxSelection: true, site: 'Noida', AllVehicleType: 'Truck'},
-    { all: " ", checkboxSelection: true, site: 'Delhi', AllVehicleType: 'Mini Truck' },
-    { all: " ", checkboxSelection: true, site: 'Gurgaon', AllVehicleType: 'Truck' },
-    { all: " ", checkboxSelection: true, site: 'Agra', AllVehicleType: 'Van' }
+    { all: " ", checkboxSelection: true, sno: '1.', AllVehicleType: 'Van' },
+    { all: " ", checkboxSelection: true, sno: '2.', AllVehicleType: 'Truck'},
+    { all: " ", checkboxSelection: true, sno: '3.', AllVehicleType: 'Mini Truck' },
+    { all: " ", checkboxSelection: true, sno: '4.', AllVehicleType: 'Truck' },
+    { all: " ", checkboxSelection: true, sno: '5.', AllVehicleType: 'Van' }
   ];
 }

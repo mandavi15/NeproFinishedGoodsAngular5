@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 /** create-truck component*/
 export class CreateTruckComponent {
   columnDefs = [
-    { headerName: "All", checkboxSelection: true, field: "all", width: 150 },
-    { headerName: 'Vehicle Type', field: 'VehicleType', sortable: true, filter: true, width: 200 },
-    { headerName: 'Vehicle Possessed By', field: 'VehiclePossessedBy', sortable: true, filter: true, width: 200 },
-    { headerName: 'Vehicle Owner Name', field: 'VehicleOwnerName', sortable: true, filter: true, width: 200 },
-    { headerName: 'Registration No.', field: 'RegistrationNo', sortable: true, filter: true, width: 200 },
-    { headerName: 'Capacity in Weight', field: 'CapacityinWeight', sortable: true, filter: true, width: 200 },
-    { headerName: 'Capacity in Volume', field: 'CapacityinVolume', sortable: true, filter: true, width: 200 },
+    { headerName: "All", checkboxSelection: true, field: "all", width: 80 },
+    { headerName: 'Vehicle Type', field: 'VehicleType', sortable: true, filter: true, width: 110 },
+    { headerName: 'Vehicle Possessed By', field: 'VehiclePossessedBy', sortable: true, filter: true, width: 160 },
+    { headerName: 'Vehicle Owner Name', field: 'VehicleOwnerName', sortable: true, filter: true, width: 160 },
+    { headerName: 'Registration No.', field: 'RegistrationNo', sortable: true, filter: true, width: 130 },
+    { headerName: 'Capacity in Weight (in kg)', field: 'CapacityinWeight', sortable: true, filter: true, width: 200 },
+    { headerName: 'Capacity in Volume (in cu)', field: 'CapacityinVolume', sortable: true, filter: true, width: 200 },
     { headerName: 'Vehicle Name', field: 'VehicleName', sortable: true, filter: true, width: 200 }
 
   ];
