@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 /** grid-picking-location component*/
 export class GridPickingLocationComponent {
   columnDefs = [
-    { headerName: "S.No.", field: "all", width: 100 },
+    { headerName: "S.No.", field: "all", width: 95 },
     { headerName: 'Pick List Number', field: 'PickListNumber', sortable: true, filter: true, width: 150 },
-    { headerName: 'Created By', field: 'CreatedBy', sortable: true, filter: true, width: 200 },
+    { headerName: 'Created By', field: 'CreatedBy', sortable: true, filter: true, width: 190 },
     { headerName: 'Created On', field: 'CreatedOn', sortable: true, filter: true, width: 200 },
-    { headerName: 'Customer Name', field: 'CustomerName', sortable: true, filter: true, width: 200 },
-    { headerName: 'Status', field: 'Status', sortable: true, filter: true, width: 135 }
+    { headerName: 'Customer Name', field: 'CustomerName', sortable: true, filter: true, width: 250 },
+    { headerName: 'Status', field: 'Status', sortable: true, filter: true, width: 100 }
 
 
   ];

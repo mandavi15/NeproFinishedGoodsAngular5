@@ -76,7 +76,21 @@ export class GridPickingListComponent {
 
   ];
 
+  PickListcolumnDefs = [
+    { headerName: 'S.No.', field: 'sno', sortable: true, filter: true, width: 100 },
+    { headerName: 'Item', field: 'item', sortable: true, filter: true, width: 250 },
+    { headerName: 'Unit', field: 'unit', sortable: true, filter: true, width: 200 },
+    { headerName: 'To Be Delivered Quantity', field: 'qty', sortable: true, filter: true, width: 200 }
+  ];
 
+  PickListrowData = [
+    { sno: '1.', item: 'Item 1', unit: 'Kg', qty: '20' },
+    { sno: '2.', item: 'Item 2', unit: 'Kg', qty: '20' },
+    { sno: '3.', item: 'Item 3', unit: 'Kg', qty: '20' },
+    { sno: '4.', item: 'Item 4', unit: 'Kg', qty: '20' },
+    { sno: '5.', item: 'Item 5', unit: 'Kg', qty: '20' }
+
+  ];
 
 
 
