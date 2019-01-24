@@ -7,6 +7,7 @@ import 'ag-grid-enterprise';
   
 })
 /** grid-picking-location component*/
+
 export class GridPickingLocationComponent implements OnInit {
   //columnDefs = [
   //  { headerName: "S.No.", field: "all", width: 150 },
