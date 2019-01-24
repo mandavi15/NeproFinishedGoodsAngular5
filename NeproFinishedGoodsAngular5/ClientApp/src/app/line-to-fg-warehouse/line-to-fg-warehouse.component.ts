@@ -11,6 +11,7 @@ export class LineToFgWarehouseComponent {
     constructor() {
 
   }
+
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 80 },
     { headerName: 'Sticker Code', field: 'stickerCode', sortable: true, filter: true, width: 150 },
