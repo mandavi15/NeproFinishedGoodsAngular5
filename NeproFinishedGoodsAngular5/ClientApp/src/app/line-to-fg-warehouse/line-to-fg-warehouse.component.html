@@ -1,4 +1,305 @@
-<ag-grid-angular style="width:100%; height: auto"
-                 class="ag-theme-balham"
-                 [rowData]="rowData"
-                 [columnDefs]="columnDefs"></ag-grid-angular>
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+      <div class="card-body pull-right p-1">
+        <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
+        <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
+        <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+        <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
+        <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
+      </div>
+      <div class="clearfix"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-text">
+                <h4 class="card-title">Line To FG WH Instrucions</h4>
+              </div>
+              <h4 class="card-title"></h4>
+            </div>
+            <div class="card-body">
+              <ag-grid-angular style="width:100%; height: auto"
+                               class="ag-theme-balham"
+                               [rowData]="rowData"
+                               [columnDefs]="columnDefs"></ag-grid-angular>
+
+
+              <!--<div class="table-responsive">
+                <table class="table table-striped">
+                  <thead style="background-color: #eceaea;">
+                    <tr>
+                      <th>All</th>
+                      <th>Vehicle Type</th>
+                      <th>Vehicle Possessed By</th>
+                      <th>Vehicle Owner Name</th>
+                      <th>Registration No.</th>
+                      <th>Capacity in Weight</th>
+                      <th>Capacity in Volume</th>
+                      <th>Vehicle Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Truck</td>
+                      <td>Third Party</td>
+                      <td>Amar Singh</td>
+                      <td>UP-16 BZ-0345</td>
+                      <td>20000</td>
+                      <td>20000</td>
+                      <td>Name 1</td>
+                    </tr>
+                    <tr>
+
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Truck</td>
+                      <td>Third Party</td>
+                      <td>Amar Singh</td>
+                      <td>UP-16 BZ-0345</td>
+                      <td>20000</td>
+                      <td>20000</td>
+                      <td>Name 1</td>
+                    </tr>
+                    <tr>
+
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Truck</td>
+                      <td>Third Party</td>
+                      <td>Amar Singh</td>
+                      <td>UP-16 BZ-0345</td>
+                      <td>20000</td>
+                      <td>20000</td>
+                      <td>Name 1</td>
+                    </tr>
+                    <tr>
+
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Truck</td>
+                      <td>Third Party</td>
+                      <td>Amar Singh</td>
+                      <td>UP-16 BZ-0345</td>
+                      <td>20000</td>
+                      <td>20000</td>
+                      <td>Name 1</td>
+                    </tr>
+                    <tr>
+
+                      <td>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="" checked>
+                            <span class="form-check-sign">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                      </td>
+                      <td>Truck</td>
+                      <td>Third Party</td>
+                      <td>Amar Singh</td>
+                      <td>UP-16 BZ-0345</td>
+                      <td>20000</td>
+                      <td>20000</td>
+                      <td>Name 1</td>
+                    </tr>
+
+
+                  </tbody>
+                </table>
+              </div>-->
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-12">
+          <div class="card ">
+            <div class="card-header card-header-rose card-header-text">
+              <div class="card-text">
+                <h4 class="card-title">Line To FG WH Instrucions</h4>
+              </div>
+            </div>
+            <div class="card-body ">
+              <form method="get" class="form-horizontal">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Sticker Scan</label>
+                      <div class="col-sm-8">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Item</label>
+                      <div class="col-sm-8">
+                        <label class="col-form-label">Item 1</label>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6">
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Work Order</label>
+                      <div class="col-sm-8">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="">
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <label class="colWidth14 col-form-label">Quantity Selection</label>
+                      <div class="col-sm-10 radioCon">
+                        <div class="form-check col-sm-4 radioStyle">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" value="option2" checked> Standard Sticker Quantity
+                            <span class="circle">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="form-check col-sm-4 radioStyle">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="exampleRadios" value="option1"> Non Standard Quantity
+                            <span class="circle">
+                              <span class="check"></span>
+                            </span>
+                          </label>
+                        </div>
+                        <div class="form-group col-sm-3 m-0 radioStyle p-0">
+                          <input type="text" class="form-control" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </form>
+            </div>
+
+            <div class="locationCon">
+              <h5 class="locationHead">Location</h5>
+              <form method="get" class="form-horizontal">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">WareHouse</label>
+
+                      <div class="col-lg-9 col-md-9 col-sm-12">
+                        <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                          <option disabled> Select</option>
+                          <option value="2">WareHouse 1 </option>
+                          <option value="3">WareHouse 2</option>
+                          <option value="4">WareHouse 3</option>
+
+                        </select>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Rack</label>
+
+                      <div class="col-lg-9 col-md-9 col-sm-12">
+                        <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                          <option disabled> Select</option>
+                          <option value="2">Rack 1 </option>
+                          <option value="3">Rack 2</option>
+                          <option value="4">Rack 3</option>
+
+                        </select>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Aisle</label>
+
+                      <div class="col-lg-9 col-md-9 col-sm-12">
+                        <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                          <option disabled> Select</option>
+                          <option value="2">Aisle 1 </option>
+                          <option value="3">Aisle 2</option>
+                          <option value="4">Aisle 3</option>
+
+                        </select>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <label class="col-sm-3 col-form-label">Bin</label>
+
+                      <div class="col-lg-9 col-md-9 col-sm-12">
+                        <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                          <option disabled> Select</option>
+                          <option value="2">Bin 1 </option>
+                          <option value="3">Bin 2</option>
+                          <option value="4">Bin 3</option>
+
+                        </select>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
