@@ -3077,7 +3077,7 @@ height:calc((2.4375rem + 2px) - 0 * 2);
 	bottom: 100%
 }
 .navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
-	color: rgba(0,0,0,.9)
+  color: #e6efec
 }
 .navbar-light .navbar-nav .nav-link {
 	color: rgba(0,0,0,.5)
