@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'ag-grid-enterprise';
 @Component({
-    selector: 'app-grid-picking-location',
-    templateUrl: './grid-picking-location.component.html'
-  
+  selector: 'app-grid-picking-location',
+  templateUrl: './grid-picking-location.component.html'
+
 })
 /** grid-picking-location component*/
-
 export class GridPickingLocationComponent implements OnInit {
   //columnDefs = [
   //  { headerName: "S.No.", field: "all", width: 150 },
@@ -40,34 +39,34 @@ export class GridPickingLocationComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.columnDefs = [
       {
-        field: "name",
+        field: "sno",
         cellRenderer: "agGroupCellRenderer"
       },
-      { field: "account" },
-      { field: "calls" },
+      { field: "item" },
+      { field: "unit" },
       {
-        field: "minutes",
+        field: "tobedeliveredquantity",
         valueFormatter: "x.toLocaleString() + 'm'"
       }
     ];
     this.detailCellRendererParams = {
       detailGridOptions: {
         columnDefs: [
-          { field: "callId" },
-          { field: "direction" },
-          { field: "number" },
+          { field: "sno" },
+          { field: "stickercode" },
+          { field: "stickerquantity" },
           {
-            field: "duration",
+            field: "tobepickedquantity",
             valueFormatter: "x.toLocaleString() + 's'"
           },
-          { field: "switchCode" }
+          { field: "pickedquantity" }
         ],
         onFirstDataRendered(params) {
           params.api.sizeColumnsToFit();
         }
       },
       getDetailRowData: function (params) {
-        params.successCallback(params.data.callRecords);
+        params.successCallback(params.data.location);
       }
     };
   }
@@ -78,7 +77,7 @@ export class GridPickingLocationComponent implements OnInit {
 
     this.http
       .get(
-        "https://raw.githubusercontent.com/ag-grid/ag-grid-docs/latest/src/javascript-grid-master-detail/simple/data/data.json"
+        "http://localhost:64944/assets/json/nestdata.json"
       )
       .subscribe(data => {
         this.rowData = data;
