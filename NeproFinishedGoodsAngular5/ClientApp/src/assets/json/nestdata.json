@@ -1,0 +1,156 @@
+[{
+    "sno": 1,
+    "item": "item1",
+    "unit": "kg",
+    "tobedeliveredquantity": 25,
+    "location": [{
+        "name": "susan",
+        "sno": 1,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+         "name": "susan",
+        "sno": 2,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+        "name": "susan",
+        "sno": 3,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }]
+},
+    {
+        "sno": 2,
+    "item": "item1",
+    "unit": "kg",
+    "tobedeliveredquantity": 25,
+    "location":  [{
+             "name": "susan",
+        "sno": 1,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+         "name": "susan",
+        "sno": 2,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+        "name": "susan",
+        "sno": 3,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+        }]
+    },
+    {
+       "sno": 3,
+    "item": "item1",
+    "unit": "kg",
+    "tobedeliveredquantity": 25,
+    "location": [{
+           "name": "susan",
+        "sno": 1,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+         "name": "susan",
+        "sno": 2,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+        "name": "susan",
+        "sno": 3,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+        }]
+    },
+    {
+        "sno": 4,
+    "item": "item1",
+    "unit": "kg",
+    "tobedeliveredquantity": 25,
+    "location": [{
+           "name": "susan",
+        "sno": 1,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+         "name": "susan",
+        "sno": 2,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+        "name": "susan",
+        "sno": 3,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+        }]
+    },
+    {
+       "sno": 5,
+    "item": "item1",
+    "unit": "kg",
+    "tobedeliveredquantity": 25,
+    "location": [{
+           "name": "susan",
+        "sno": 1,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+         "name": "susan",
+        "sno": 2,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+    }, {
+        "name": "susan",
+        "sno": 3,
+        "stickercode": 72,
+        "stickerquantity": 20,
+        "tobepickedquantity": 5,
+        "pickedquantity": 2,
+		"reason": " "
+        }]
+    }
+]
