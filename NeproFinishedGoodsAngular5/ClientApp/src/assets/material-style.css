@@ -17830,13 +17830,8 @@ a.fc-more:hover {
 .ct-chart .ct-series-c .ct-area, .ct-chart .ct-series-c .ct-slice-donut-solid, .ct-chart .ct-series-c .ct-slice-pie {
 	fill: #ff9800
 }
-/*!
- * Bootstrap-select v1.13.1 (https://developer.snapappointments.com/bootstrap-select)
- *
- * Copyright 2012-2018 SnapAppointments, LLC
- * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
- */select.bs-select-hidden, select.selectpicker {
-	display: none!important
+select.bs-select-hidden, select.selectpicker {
+	/*display: none!important*/
 }
 .bootstrap-select>.dropdown-toggle {
 	padding-right: 25px
@@ -17938,7 +17933,7 @@ a.fc-more:hover {
   color: #fff
 }
 .bootstrap-select>select.bs-select-hidden, select.bs-select-hidden, select.selectpicker {
-	display: none!important
+	/*display: none!important*/
 }
 .bootstrap-select {
 	width: 220px
