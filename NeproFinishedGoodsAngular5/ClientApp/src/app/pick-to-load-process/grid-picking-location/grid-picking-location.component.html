@@ -18,10 +18,21 @@
             <h4 class="card-title"></h4>
           </div>
           <div class="card-body">
-            <ag-grid-angular style="width:100%; height: auto"
+            <!--<ag-grid-angular style="width:100%; height: auto"
+                   class="ag-theme-balham"
+                   [rowData]="rowData"
+                   [columnDefs]="columnDefs"></ag-grid-angular>-->
+
+            <ag-grid-angular #agGrid
+                             style="width: 100%; height: 100%;"
+                             id="myGrid"
                              class="ag-theme-balham"
+                             [columnDefs]="columnDefs"
+                             [masterDetail]="true"
+                             [detailCellRendererParams]="detailCellRendererParams"
                              [rowData]="rowData"
-                             [columnDefs]="columnDefs"></ag-grid-angular>
+                             (gridReady)="onGridReady($event)"></ag-grid-angular>
+
             <!--<div class="table-responsive">
     <table class="table table-striped">
       <thead style="background-color: #eceaea;">
