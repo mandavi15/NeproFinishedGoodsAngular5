@@ -2,7 +2,10 @@
   height: 80%;
 }
 
-
+.selectpicker {
+  width: 50%;
+  padding: 2px
+}
 
 .sidebar {
   background-image: url('img/sidebar-1.jpg') !important;
