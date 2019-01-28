@@ -17,6 +17,7 @@ export class GridPickingLocationComponent implements OnInit {
   //  { headerName: 'Status', field: 'Status', sortable: true, filter: true, width: 275 }
 
 
+
   //];
 
   //rowData = [
