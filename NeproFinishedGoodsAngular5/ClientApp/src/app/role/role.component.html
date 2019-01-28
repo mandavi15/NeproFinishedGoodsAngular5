@@ -1,1 +1,69 @@
-﻿<div style="border: 1px solid red">role Component</div>
+<div class="content">
+  <div class="container-fluid">
+    <div class="card-body pull-right p-1">
+      <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal1"><i class="fa fa-plus-square-o" aria-hidden="true" ></i>New</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
+      <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-rose card-header-icon">
+            <div class="card-text">
+              <h4 class="card-title">All Roles</h4>
+            </div>
+            <h4 class="card-title"></h4>
+          </div>
+          <div class="card-body">
+            <ag-grid-angular style="width:100%; height: auto"
+                             class="ag-theme-balham"
+                             [rowData]="rowData"
+                             [columnDefs]="columnDefs"></ag-grid-angular>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal1" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span class="cross">&times;</span></button>
+        <h4 class="modal-title modalHead">Create Role</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <label class="col-sm-3 col-form-label">Sticker Code</label>
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          
+
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
