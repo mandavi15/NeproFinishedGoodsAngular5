@@ -4,7 +4,8 @@
 
 .selectpicker {
   width: 50%;
-  padding: 2px
+  padding: 2px;
+  margin: 10px 0;
 }
 
 .sidebar {
