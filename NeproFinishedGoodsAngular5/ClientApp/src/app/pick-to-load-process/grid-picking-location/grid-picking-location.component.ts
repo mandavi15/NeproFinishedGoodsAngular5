@@ -43,10 +43,10 @@ export class GridPickingLocationComponent implements OnInit {
         field: "sno",
         cellRenderer: "agGroupCellRenderer"
       },
-      { field: "item" },
+      { field: "Item" },
       { field: "unit" },
       {
-        field: "tobedeliveredquantity",
+        field: "To Be Delivered Quantity",
         valueFormatter: "x.toLocaleString() + 'm'"
       }
     ];
@@ -54,13 +54,13 @@ export class GridPickingLocationComponent implements OnInit {
       detailGridOptions: {
         columnDefs: [
           { field: "sno" },
-          { field: "stickercode" },
-          { field: "stickerquantity" },
+          { field: "sticker code" },
+          { field: "sticker quantity" },
           {
-            field: "tobepickedquantity",
+            field: "to be picked quantity",
             valueFormatter: "x.toLocaleString() + 's'"
           },
-          { field: "pickedquantity" }
+          { field: "picked quantity" }
         ],
         onFirstDataRendered(params) {
           params.api.sizeColumnsToFit();
