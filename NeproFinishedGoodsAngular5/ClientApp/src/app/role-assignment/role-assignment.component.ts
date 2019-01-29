@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 /** role-assignment component*/
 export class RoleAssignmentComponent {
     /** role-assignment ctor */
+    constructor() {
+
+  }
   public data: any[] = [
     {
       text: 'Furniture', items: [
