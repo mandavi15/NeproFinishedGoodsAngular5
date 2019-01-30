@@ -30,7 +30,7 @@ import { StillageToStillageComponent } from './stillage-to-stillage/stillage-to-
 import { GridAssignTruckComponent } from './pick-to-load-process/grid-assign-truck/grid-assign-truck.component';
 import { GridPickedListComponent } from './pick-to-load-process/grid-picked-list/grid-picked-list.component';
 import { GridPickingListComponent } from './pick-to-load-process/grid-picking-list/grid-picking-list.component';
-import { GridPickingLocationComponent } from './pick-to-load-process/grid-picking-location/grid-picking-location.component';
+//import { GridPickingLocationComponent } from './pick-to-load-process/grid-picking-location/grid-picking-location.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,7 @@ import { GridPickingLocationComponent } from './pick-to-load-process/grid-pickin
     GridAssignTruckComponent,
     GridPickedListComponent,
     GridPickingListComponent,
-    GridPickingLocationComponent,
+   
     CreateStillageComponent
   
   ],
@@ -86,7 +86,7 @@ import { GridPickingLocationComponent } from './pick-to-load-process/grid-pickin
       { path: 'assign-truck', component: GridAssignTruckComponent },
       { path: 'picked-list', component: GridPickedListComponent },
       { path: 'picking-list', component: GridPickingListComponent },
-      { path: 'picking-location', component: GridPickingLocationComponent },
+     
      
     ])
   ],
