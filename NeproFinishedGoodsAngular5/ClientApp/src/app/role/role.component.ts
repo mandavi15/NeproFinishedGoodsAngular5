@@ -25,4 +25,25 @@ export class RoleComponent {
     { all: " ", checkboxSelection: true, SNo: '9', RoleName: 'Warehouse 1' },
 
   ];
+
+
+
+
+  public data: any[] = [
+    {
+      text: 'Role 1', items: [
+        { text: 'Setup', items: [
+          { text: 'Setup' },
+          { text: 'Rack' }
+
+        ] },
+        {
+          text: 'Pick List', items: [
+            { text: 'Picking List' },
+
+          ] }
+        
+      ]
+    }
+  ];
 }
