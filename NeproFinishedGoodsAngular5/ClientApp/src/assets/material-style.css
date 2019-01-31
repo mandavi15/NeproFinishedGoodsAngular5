@@ -1,3 +1,8 @@
+.k-treeview .k-in.k-state-selected {
+  color: #fff;
+  background-color: #09a777 !important;
+  border-radius: 5px;
+}
 .iconinline {
   display: inline-flex;
   text-align: center;
