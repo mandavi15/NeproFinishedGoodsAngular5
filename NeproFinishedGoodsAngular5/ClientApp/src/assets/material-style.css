@@ -28,7 +28,9 @@
 .k-textbox {
   height: 80%;
 }
-
+#dashboard .card .card-body {
+  padding: 1rem 1rem !important;
+}
 .selectpicker {
   width: 50%;
   padding: 2px;
