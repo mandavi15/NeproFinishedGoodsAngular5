@@ -70,3 +70,7 @@ button .fa {
   font-weight: 400;
   text-transform: none;
 }
+
+.selectBox .form-control {
+height:36px
+}

@@ -10,9 +10,12 @@
   padding: 1rem 1rem !important;
 }
 .selectpicker {
-  width: 50%;
-  padding: 2px;
-  margin: 10px 0;
+  width: 100%;
+  padding-left: 5px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
 }
 
 .sidebar {
@@ -7673,7 +7676,7 @@ form {
 	background: no-repeat bottom, 50% calc(100% - 1px);
 	background-size: 0 100%, 100% 100%;
 	border: 0;
-	height: 36px;
+	height: 30px;
 	transition: background 0s ease-out;
 	padding-left: 0;
 	padding-right: 0;
