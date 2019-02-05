@@ -11,19 +11,83 @@ export class RoleAssignmentComponent {
     constructor() {
 
   }
-  public data: any[] = [
+  public data1: any[] = [
     {
-      text: 'Furniture', items: [
-        { text: 'Tables & Chairs' },
-        { text: 'Sofas' },
-        { text: 'Occasional Furniture' }
+      text: 'Role 1', items: [
+        {
+          text: 'Setup', items: [
+            { text: 'Setup' },
+            { text: 'Rack' }
+
+          ]
+        },
+        {
+          text: 'Pick List', items: [
+            { text: 'Picking List' },
+
+          ]
+        }
+
       ]
-    },
+  }
+  ];
+  public data2: any[] = [
     {
-      text: 'Decor', items: [
-        { text: 'Bed Linen' },
-        { text: 'Curtains & Blinds' },
-        { text: 'Carpets' }
+      text: 'Role 2', items: [
+        {
+          text: 'Setup', items: [
+            { text: 'Setup' },
+            { text: 'Rack' }
+
+          ]
+        },
+        {
+          text: 'Pick List', items: [
+            { text: 'Picking List' },
+
+          ]
+        }
+
+      ]
+    }
+  ];
+  public data3: any[] = [
+    {
+      text: 'Role 3', items: [
+        {
+          text: 'Setup', items: [
+            { text: 'Setup' },
+            { text: 'Rack' }
+
+          ]
+        },
+        {
+          text: 'Pick List', items: [
+            { text: 'Picking List' },
+
+          ]
+        }
+
+      ]
+    }
+  ];
+  public data4: any[] = [
+    {
+      text: 'Role 4', items: [
+        {
+          text: 'Setup', items: [
+            { text: 'Setup' },
+            { text: 'Rack' }
+
+          ]
+        },
+        {
+          text: 'Pick List', items: [
+            { text: 'Picking List' },
+
+          ]
+        }
+
       ]
     }
   ];

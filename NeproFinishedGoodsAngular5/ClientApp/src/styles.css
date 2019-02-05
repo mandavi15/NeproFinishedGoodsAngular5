@@ -70,3 +70,14 @@ button .fa {
   font-weight: 400;
   text-transform: none;
 }
+
+.selectBox .form-control {
+height:36px
+}
+
+.ag-theme-balham .ag-filter-select {
+  padding-left: 4px;
+}
+.ag-theme-balham .ag-row-selected {
+  background-color: #d6e3df !important;
+}

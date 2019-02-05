@@ -1,3 +1,25 @@
+.k-treeview .k-in.k-state-selected {
+  color: #fff;
+  background-color: #09a777 !important;
+  border-radius: 5px;
+}
+.iconinline {
+  display: inline-flex;
+  text-align: center;
+}
+
+
+
+.icons {
+  border: 1px solid #09a777;
+  color: #ffffff;
+  background-color: #09a777;
+  padding: 9px;
+  border-radius: 5px;
+}
+
+
+
 @media (min-width: 992px) {
   #myModal1 .modal-lg {
     max-width: 400px;
@@ -6,11 +28,16 @@
 .k-textbox {
   height: 80%;
 }
-
+#dashboard .card .card-body {
+  padding: 1rem 1rem !important;
+}
 .selectpicker {
-  width: 50%;
-  padding: 2px;
-  margin: 10px 0;
+  width: 100%;
+  padding-left: 5px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
 }
 
 .sidebar {
@@ -7671,7 +7698,7 @@ form {
 	background: no-repeat bottom, 50% calc(100% - 1px);
 	background-size: 0 100%, 100% 100%;
 	border: 0;
-	height: 36px;
+	height: 30px;
 	transition: background 0s ease-out;
 	padding-left: 0;
 	padding-right: 0;
@@ -9158,7 +9185,7 @@ html * {
 }
 .h6, h6 {
 	font-size: .75rem;
-	text-transform: uppercase;
+	
 	font-weight: 500
 }
 .card-title, .card-title a, .footer-big h4, .footer-big h4 a, .footer-big h5, .footer-big h5 a, .footer-brand, .footer-brand a, .info-title, .info-title a, .media .media-heading, .media .media-heading a, .title, .title a {
