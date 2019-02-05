@@ -81,3 +81,6 @@ height:36px
 .ag-theme-balham .ag-row-selected {
   background-color: #d6e3df !important;
 }
+.roleIcon {
+  padding: 15px 8px;
+}
