@@ -53,10 +53,14 @@
   background-image: url('img/sidebar-1.jpg') !important;
   background-position: center !important;
 }
+.loginmain {
+  background-image: url('img/images1.jpg') !important;
+  background-position: center !important;
+}
 
-  .sidebar .logo {
-    background: rgb(174, 173, 173) !important;
-  }
+.sidebar .logo {
+  background: rgb(174, 173, 173) !important;
+}
 .card {
   font-size: .75rem
 }
