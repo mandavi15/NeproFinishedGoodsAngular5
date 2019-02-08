@@ -101,6 +101,7 @@ z-index:9;
   }
 .mailBox {
   border: 1px solid #2eab85;
+  background: #dff5ee;
 }
 .card .card-body .mailBox .form-group {
   margin: 0px 0 0;
