@@ -10669,8 +10669,13 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
     position: relative
   }
 .card .card-body .form-group {
-	margin: 8px 0 0
+	margin: 8px 0 0;
+  z-index:10;
 }
+    .card .card-body .form-group {
+      margin: 8px 0 0;
+      z-index: 10;
+    }
 .card .card-header {
 	z-index: 3!important
 }
