@@ -44,9 +44,11 @@
   width: 100%;
   padding-left: 5px;
   margin: 0;
+  padding-top: 8px;
   border: 0;
   background: transparent;
   font-size: 12px;
+  color: #676565;
 }
 
 .sidebar {
@@ -10667,8 +10669,13 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
     position: relative
   }
 .card .card-body .form-group {
-	margin: 8px 0 0
+	margin: 8px 0 0;
+  z-index:10;
 }
+    .card .card-body .form-group {
+      margin: 8px 0 0;
+      z-index: 10;
+    }
 .card .card-header {
 	z-index: 3!important
 }
