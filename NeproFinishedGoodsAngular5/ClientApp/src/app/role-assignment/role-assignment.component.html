@@ -19,7 +19,7 @@
           </div>
           <div class="card-body">
             <div class="row">
-              <div class=" col-md-2">
+              <div class="col-md-2 p-0">
                 <kendo-treeview [nodes]="data1"
                                 textField="text"
                                 kendoTreeViewExpandable
@@ -49,24 +49,28 @@
 
                 <div class="col-md-12">
                   <div class="row pl-1">
-                    <div class="col-md-6 mt-2">
+                    <div class="col-md-9 mt-2 p-0">
                       <h5 style="color: #09a777;">Assigned Roles</h5>
                     </div>
-                    <div class="col-md-6">
-                      <div class="col-md-12 col-sm-12 pull-right pr-0">
-                        <select class="selectpicker pull-right" data-style="select-with-transition" title="" data-size="7">
-                          <option disabled> abc@gmail.com</option>
-                          <option value="2">Noida </option>
-                          <option value="3">Delhi</option>
-                          <option value="4">Agra</option>
+                    <div class="col-md-3 pl-0 pt-2">
+                      <div class="col-md-12 col-sm-12 pull-right p-0 mailBox">
+                        <div class="dropdown">
+                          <div class="form-group">
+                            <select class="selectpicker pull-right p-1" data-style="select-with-transition" title="" data-size="7">
+                              <option value="1"> abc@gmail.com</option>
+                              <option value="2">def@gmail.com </option>
+                              <option value="3">ghi@gmail.com</option>
+                              <option value="4">jkl@gmail.com</option>
 
-                        </select>
-                      </div>
+                            </select>
+                          </div>
+                        </div>
                     </div>
+                          </div>
 
 
-                  </div>
-                </div>
+                        </div>
+                      </div>
 
                 <div class="col-md-12">
                   <div class="row pl-2">
