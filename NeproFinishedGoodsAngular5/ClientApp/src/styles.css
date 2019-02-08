@@ -70,3 +70,30 @@ button .fa {
   font-weight: 400;
   text-transform: none;
 }
+
+.selectBox .form-control {
+height:36px
+}
+
+.ag-theme-balham .ag-filter-select {
+  padding-left: 4px;
+}
+.ag-theme-balham .ag-row-selected {
+  background-color: #d6e3df !important;
+}
+.roleIcon {
+  padding: 15px 8px;
+}
+
+
+  .dropdown:after {
+    position: absolute;
+    content: '';
+    right: 12px;
+    top: 19px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #948c8c;
+  }
