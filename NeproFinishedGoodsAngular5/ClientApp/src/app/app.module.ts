@@ -34,6 +34,8 @@ import { GridPickingListComponent } from './pick-to-load-process/grid-picking-li
 import { LoginComponent } from './login/login.component';
 //import { GridPickingLocationComponent } from './pick-to-load-process/grid-picking-location/grid-picking-location.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
