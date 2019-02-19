@@ -32,6 +32,10 @@ import { GridAssignTruckComponent } from './pick-to-load-process/grid-assign-tru
 import { GridPickedListComponent } from './pick-to-load-process/grid-picked-list/grid-picked-list.component';
 import { GridPickingListComponent } from './pick-to-load-process/grid-picking-list/grid-picking-list.component';
 import { LoginComponent } from './login/login.component';
+
+
+//import { AuthService } from './services/auth.service';
+//import { AuthGuard } from './services/auth.guard';
 //import { GridPickingLocationComponent } from './pick-to-load-process/grid-picking-location/grid-picking-location.component';
 
 
@@ -93,6 +97,7 @@ import { LoginComponent } from './login/login.component';
       { path: 'login', component: LoginComponent },
      
     ])
+
   ],
   providers: [],
   bootstrap: [AppComponent]

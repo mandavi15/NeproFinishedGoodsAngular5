@@ -122,3 +122,7 @@ select.selectpicker option:hover {
   background: #09a777 !important;
   color: #ffffff !important;
 }
+.ag-cell-not-inline-editing{
+  height:22px;
+
+}
