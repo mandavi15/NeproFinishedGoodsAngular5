@@ -91,8 +91,7 @@ import { LoginComponent } from './login/login.component';
       { path: 'picked-list', component: GridPickedListComponent },
       { path: 'picking-list', component: GridPickingListComponent },
       { path: 'login', component: LoginComponent },
-     
-    ])
+     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
