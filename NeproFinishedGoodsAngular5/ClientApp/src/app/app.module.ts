@@ -97,7 +97,6 @@ import { LoginComponent } from './login/login.component';
       { path: 'login', component: LoginComponent },
      
     ])
-
   ],
   providers: [],
   bootstrap: [AppComponent]
