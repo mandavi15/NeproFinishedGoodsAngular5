@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+//import { AuthService } from '../auth.service';
 
 @Component({
     selector: 'app-login',
@@ -6,9 +9,12 @@ import { Component } from '@angular/core';
     styleUrls: ['./login.component.css']
 })
 /** Login component*/
-export class LoginComponent {
-    /** Login ctor */
-    constructor() {
+export class LoginComponent implements OnInit {
 
-    }
+  constructor() {
+   
+  }
+  ngOnInit() {
+  }
+ 
 }

@@ -1,7 +1,8 @@
+/// <reference path="auth.guard.ts" />
+/// <reference path="auth.guard.ts" />
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
@@ -32,9 +33,9 @@ import { GridAssignTruckComponent } from './pick-to-load-process/grid-assign-tru
 import { GridPickedListComponent } from './pick-to-load-process/grid-picked-list/grid-picked-list.component';
 import { GridPickingListComponent } from './pick-to-load-process/grid-picking-list/grid-picking-list.component';
 import { LoginComponent } from './login/login.component';
+
+//import { AuthGuard } from './auth.guard';
 //import { GridPickingLocationComponent } from './pick-to-load-process/grid-picking-location/grid-picking-location.component';
-
-
 
 @NgModule({
   declarations: [
@@ -61,9 +62,8 @@ import { LoginComponent } from './login/login.component';
     GridAssignTruckComponent,
     GridPickedListComponent,
     GridPickingListComponent,
-   
     CreateStillageComponent,
-  LoginComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
