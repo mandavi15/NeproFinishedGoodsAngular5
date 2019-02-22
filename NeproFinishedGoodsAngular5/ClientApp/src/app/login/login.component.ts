@@ -10,11 +10,12 @@ import { Router } from '@angular/router';
 })
 /** Login component*/
 export class LoginComponent implements OnInit {
+  public href: string = "";
+  constructor(private router: Router) { }
 
-  constructor() {
-   
-  }
   ngOnInit() {
+    this.href = this.router.url;
+
+    console.log(this.router.url);
   }
- 
 }

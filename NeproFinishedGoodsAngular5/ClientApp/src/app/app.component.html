@@ -9,7 +9,7 @@
   </div>
 </div>-->
 
-<div class='wrapper'>
+<div class='wrapper' *ngIf='(this.router1.url !== "/login")'>
   <app-nav-menu></app-nav-menu>
   <div class='main-panel'>   
       <app-header></app-header>
@@ -18,4 +18,4 @@
       <app-footer></app-footer>
     </div>
   </div>
-s
+<router-outlet *ngIf='this.router1.url === "/login" '></router-outlet>
