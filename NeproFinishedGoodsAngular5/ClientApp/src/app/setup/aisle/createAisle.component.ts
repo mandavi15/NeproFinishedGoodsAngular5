@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'createAisle',
   templateUrl: './createAisle.component.html',
 })
-export class CreateAisleComponent {
+export class CreateAisleComponent implements OnInit {
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 100 },
     { headerName: 'Site', field: 'site', sortable: true, filter: true, width: 220  },
@@ -19,4 +19,30 @@ export class CreateAisleComponent {
     { all: " ", checkboxSelection: true, site: 'Gurgaon', warehouse: 'Warehouse 4', location: 'Aisle 4' },
     { all: " ", checkboxSelection: true, site: 'Agra', warehouse: 'Warehouse 5', location: 'Aisle 5' }
   ];
+
+  constructor(private formbuilder: FormBuilder) { }
+
+  aisleForm: FormGroup;
+  submitted = false;
+  ngOnInit() {
+    this.aisleForm = this.formbuilder.group({
+      aislename: ['', Validators.required],
+      site: ['', Validators.required],
+      warehouse: ['', Validators.required]
+    });
+
+
+  }
+  aisleSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.aisleForm.invalid) {
+      return;
+    }
+
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.aisleForm.value));
+    
+  }
+  get f() { return this.aisleForm.controls; }
 }
