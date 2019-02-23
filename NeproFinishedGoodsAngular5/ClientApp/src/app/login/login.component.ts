@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-//import { AuthService } from '../../services/auth.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+//import { AuthService } from '../auth.service';
+
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.css']
 })
 /** Login component*/
-
-
 export class LoginComponent implements OnInit {
-    /** Login ctor */
-    constructor() {
+  public href: string = "";
+  constructor(private router: Router) { }
 
-    }
-    ngOnInit() {
+  ngOnInit() {
+    this.href = this.router.url;
+
+    console.log(this.router.url);
   }
 }
