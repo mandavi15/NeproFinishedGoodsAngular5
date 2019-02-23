@@ -2,7 +2,7 @@
 /// <reference path="auth.guard.ts" />
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TreeViewModule } from '@progress/kendo-angular-treeview';
@@ -68,7 +68,7 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule, AgGridModule.withComponents([]),
-    FormsModule, BrowserAnimationsModule, TreeViewModule,
+    FormsModule, ReactiveFormsModule, BrowserAnimationsModule, TreeViewModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
