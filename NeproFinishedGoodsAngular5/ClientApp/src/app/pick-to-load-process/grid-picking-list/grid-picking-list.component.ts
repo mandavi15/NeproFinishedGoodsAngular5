@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 /** grid-picking-list component*/
 export class GridPickingListComponent {
   columnDefs = [
-    { headerName: "S.No.",  field: "all", width: 150 },
+    { headerName: "S.No.",  field: "all", width: 80 },
     { headerName: 'Pick List Number', field: 'PickListNumber', sortable: true, filter: true, width: 200 },
     { headerName: 'Created By', field: 'CreatedBy', sortable: true, filter: true, width: 150 },
     { headerName: 'Created On', field: 'CreatedOn', sortable: true, filter: true, width: 150 },
