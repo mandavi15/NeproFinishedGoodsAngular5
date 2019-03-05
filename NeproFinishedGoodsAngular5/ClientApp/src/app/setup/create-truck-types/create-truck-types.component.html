@@ -4,7 +4,7 @@
       <div class="card-body pull-right p-1">
         <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
-        <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+        <button class="btn btn-success btn-sm" (click)="vehicleTypeSubmit()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
       </div>
@@ -38,14 +38,17 @@
               </div>
             </div>
             <div class="card-body ">
-              <form method="get" class="form-horizontal">
+              <form method="get" [formGroup]="vehicleTypeForm">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="row">
                       <label class="col-sm-2 col-form-label">Vehicle Type</label>
                       <div class="col-sm-9">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="vehicleType" placeholder="" [ngClass]="{'is-invalid': submitted && f.vehicleType.errors}">
+                          <div *ngIf="submitted && f.vehicleType.errors" class="invalid-feedback">
+                            <div *ngIf="f.vehicleType.errors.required"> Vehicle type is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>

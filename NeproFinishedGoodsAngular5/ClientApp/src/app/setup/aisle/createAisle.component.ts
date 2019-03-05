@@ -7,9 +7,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CreateAisleComponent implements OnInit {
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 100 },
-    { headerName: 'Site', field: 'site', sortable: true, filter: true, width: 220  },
-    { headerName: 'WareHouse', field: 'warehouse', sortable: true, filter: true, width: 300  },
-    { headerName: 'Aisle', field: 'location', sortable: true, filter: true, width: 282  }
+    { headerName: 'Site', field: 'site', sortable: true, filter: true, width: 220 },
+    { headerName: 'WareHouse', field: 'warehouse', sortable: true, filter: true, width: 300 },
+    { headerName: 'Aisle', field: 'location', sortable: true, filter: true, width: 282 }
   ];
 
   rowData = [
@@ -33,16 +33,17 @@ export class CreateAisleComponent implements OnInit {
 
 
   }
-  aisleSubmit() {
-    this.submitted = true;
 
+aisleSubmit() { 
+    this.submitted = true;
+ 
     // stop here if form is invalid
     if (this.aisleForm.invalid) {
       return;
     }
 
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.aisleForm.value));
-    
+
   }
   get f() { return this.aisleForm.controls; }
 }

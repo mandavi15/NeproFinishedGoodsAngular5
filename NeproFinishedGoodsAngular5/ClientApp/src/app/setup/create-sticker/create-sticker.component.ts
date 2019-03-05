@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-create-sticker',
@@ -6,12 +7,8 @@ import { Component } from '@angular/core';
    
 })
 /** create-sticker component*/
-export class CreateStickerComponent {
-    /** create-sticker ctor */
-    constructor() {
-
-  }
-
+export class CreateStickerComponent implements OnInit {
+   
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 80 },
     { headerName: 'Sticker Code', field: 'stickerCode', sortable: true, filter: true, width: 120 },
@@ -68,4 +65,30 @@ export class CreateStickerComponent {
     { all: " ", checkboxSelection: true, itemID: 'SC0002', quantity: '900', unit: 'Kg', activityBy: 'Fateh Singh', activityOn: '25/12/2018', location: 'Noida', workOrderNo: 'W06' }
 
   ];
+
+  constructor(private formbuilder: FormBuilder) { }
+
+  stickerForm: FormGroup;
+  submitted = false;
+  ngOnInit() {
+    this.stickerForm = this.formbuilder.group({
+      stickerCode: ['', Validators.required],
+      truck: ['', Validators.required]
+    });
+
+
+  }
+
+  stickerSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.stickerForm.invalid) {
+      return;
+    }
+
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.stickerForm.value));
+
+  }
+  get f() { return this.stickerForm.controls; }
 }

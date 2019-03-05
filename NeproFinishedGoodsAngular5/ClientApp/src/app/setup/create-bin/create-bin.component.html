@@ -4,7 +4,7 @@
     <div class="card-body pull-right p-1">
       <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
-      <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+      <button class="btn btn-success btn-sm" (click)="binSubmit()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
     </div>
@@ -47,7 +47,7 @@
               </div>
             </div>
             <div class="card-body ">
-              <form method="get" class="form-horizontal">
+              <form method="get" [formGroup]="binForm">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="row">
@@ -55,14 +55,17 @@
                       <div class="col-lg-9 col-md-9 col-sm-12 form-group mt-0 selectBox">
                         <div class="dropdown">
                           <div class="form-group">
-                            <div class="form-control">
-                              <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                            <div class="">
+                              <select class="selectpicker form-control" placeholder="Select Site" data-size="7" formControlName="site" [ngClass]="{'is-invalid': submitted && f.site.errors}">
                                 <option> Select</option>
                                 <option value="2">Noida</option>
                                 <option value="3">Delhi</option>
                                 <option value="4">Agra</option>
 
                               </select>
+                              <div *ngIf="submitted && f.site.errors" class="invalid-feedback">
+                                <div *ngIf="f.site.errors.required"> Site is required</div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -72,7 +75,22 @@
                       <label class="col-sm-2 col-form-label">Aisle</label>
                       <div class="col-sm-9">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="aislename" placeholder="" [ngClass]="{'is-invalid': submitted && f.aislename.errors}">
+                          <div *ngIf="submitted && f.aislename.errors" class="invalid-feedback">
+                            <div *ngIf="f.aislename.errors.required"> Aisle Name is required</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <label class="col-sm-2 col-form-label">Bin Name</label>
+                      <div class="col-sm-9">
+                        <div class="form-group mt-0">
+                          <input type="text" class="form-control" formControlName="bin" placeholder="" [ngClass]="{'is-invalid': submitted && f.bin.errors}">
+                          <div *ngIf="submitted && f.bin.errors" class="invalid-feedback">
+                            <div *ngIf="f.bin.errors.required">Bin Name is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -84,14 +102,17 @@
                       <div class="col-lg-9 col-md-9 col-sm-12 form-group mt-0 selectBox">
                         <div class="dropdown">
                           <div class="form-group">
-                            <div class="form-control">
-                              <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                            <div class="">
+                              <select class="selectpicker form-control" data-style="select-with-transition" title="" data-size="7" formControlName="warehouse" [ngClass]="{'is-invalid': submitted && f.warehouse.errors}">
                                 <option> Select</option>
                                 <option value="2">WareHouse 1</option>
                                 <option value="3">WareHouse 2</option>
                                 <option value="4">WareHouse 3</option>
 
                               </select>
+                              <div *ngIf="submitted && f.warehouse.errors" class="invalid-feedback">
+                                <div *ngIf="f.warehouse.errors.required"> Warehouse  is required</div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -103,23 +124,15 @@
                       <label class="col-sm-2 col-form-label">Rack</label>
                       <div class="col-sm-9">
                         <div class="form-group">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" formControlName="rack" placeholder="" [ngClass]="{'is-invalid': submitted && f.rack.errors}">
+                          <div *ngIf="submitted && f.rack.errors" class="invalid-feedback">
+                            <div *ngIf="f.rack.errors.required"> Rack Name is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    
-
-                    <div class="row">
-                      <label class="col-sm-2 col-form-label">Bin Name</label>
-                      <div class="col-sm-9">
-                        <div class="form-group">
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                
                 </div>
               </form>
             </div>

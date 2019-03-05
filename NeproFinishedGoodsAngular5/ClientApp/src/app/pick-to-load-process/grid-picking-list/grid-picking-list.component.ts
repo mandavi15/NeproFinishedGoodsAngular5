@@ -33,7 +33,7 @@ export class GridPickingListComponent {
     { headerName: 'Item', field: 'Item', sortable: true, filter: true, width: 150 },
     { headerName: 'Item Description', field: 'ItemDescription', sortable: true, filter: true, width: 170 },
     { headerName: 'Remaining Quantity', field: 'RemainingQuantity', sortable: true, filter: true, width: 150 },
-    { headerName: 'Unit', field: 'Unit', sortable: true, filter: true, width: 150},
+    { headerName: 'Unit', field: 'Unit', sortable: true, filter: true, width: 80},
     { headerName: 'To Be Delivered Quantity', field: 'ToBeDeliveredQuantity', sortable: true, filter: true, width: 215, template: "<input class='k-textbox'/>" }
 
 
@@ -57,7 +57,7 @@ export class GridPickingListComponent {
     { headerName: 'Item', field: 'Item', sortable: true, filter: true, width: 150 },
     { headerName: 'Item Description', field: 'ItemDescription', sortable: true, filter: true, width: 170 },
     { headerName: 'Remaining Quantity', field: 'RemainingQuantity', sortable: true, filter: true, width: 150 },
-    { headerName: 'Unit', field: 'Unit', sortable: true, filter: true, width: 150 },
+    { headerName: 'Unit', field: 'Unit', sortable: true, filter: true, width: 80 },
     { headerName: 'To Be Delivered Quantity', field: 'ToBeDeliveredQuantity', sortable: true, filter: true, width: 215, template: "<input class='k-textbox'/>" }
 
 
