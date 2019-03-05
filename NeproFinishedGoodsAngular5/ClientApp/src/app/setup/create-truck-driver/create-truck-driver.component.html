@@ -4,7 +4,7 @@
     <div class="card-body pull-right p-1">
       <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
-      <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+      <button class="btn btn-success btn-sm" (click)="truckDriverSubmit()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
     </div>
@@ -47,7 +47,7 @@
               </div>
             </div>
             <div class="card-body ">
-              <form method="get" class="form-horizontal">
+              <form method="get" [formGroup]="truckDriverForm">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="row">
@@ -56,13 +56,15 @@
                         <div class="dropdown">
                           <div class="form-group">
                             <div class="form-control">
-                              <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                              <select class="selectpicker form-control" data-style="select-with-transition" title="" data-size="7" formControlName="transportName" [ngClass]="{'is-invalid': submitted && f.transportName.errors}">
                                 <option> Select</option>
                                 <option value="2">abv </option>
                                 <option value="3">dsc</option>
                                 <option value="4">cfd</option>
-
                               </select>
+                              <div *ngIf="submitted && f.transportName.errors" class="invalid-feedback">
+                                <div *ngIf="f.transportName.errors.required"> Transport Name is required</div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -73,7 +75,10 @@
                       <label class="col-sm-3 col-form-label">Driver ID</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="driverID" placeholder="" [ngClass]="{'is-invalid': submitted && f.driverID.errors}">
+                          <div *ngIf="submitted && f.driverID.errors" class="invalid-feedback">
+                            <div *ngIf="f.driverID.errors.required">Driver ID is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -86,13 +91,15 @@
                         <div class="dropdown">
                           <div class="form-group">
                             <div class="form-control">
-                              <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                              <select class="selectpicker form-control" data-style="select-with-transition" title="" data-size="7" formControlName="truckNo" [ngClass]="{'is-invalid': submitted && f.truckNo.errors}">
                                 <option> Select</option>
                                 <option value="2">UP-14-NH-5486</option>
                                 <option value="3">UP-14-NH-5486</option>
                                 <option value="4">UP-14-NH-5486</option>
-
                               </select>
+                              <div *ngIf="submitted && f.truckNo.errors" class="invalid-feedback">
+                                <div *ngIf="f.truckNo.errors.required">Truck No. is required</div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -105,7 +112,10 @@
                       <label class="col-sm-3 col-form-label">Driver Name</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" formControlName="driverName" placeholder="" [ngClass]="{'is-invalid': submitted && f.driverName.errors}">
+                          <div *ngIf="submitted && f.driverName.errors" class="invalid-feedback">
+                            <div *ngIf="f.driverName.errors.required"> Driver Name is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -118,7 +128,10 @@
                       <label class="col-sm-3 col-form-label">Contact No.</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" formControlName="contactNo" placeholder="" [ngClass]="{'is-invalid': submitted && f.contactNo.errors}">
+                          <div *ngIf="submitted && f.contactNo.errors" class="invalid-feedback">
+                            <div *ngIf="f.contactNo.errors.required">Contact No. is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -127,7 +140,10 @@
                       <label class="col-sm-3 col-form-label">Address</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" formControlName="address" placeholder="" [ngClass]="{'is-invalid': submitted && f.address.errors}">
+                          <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                            <div *ngIf="f.address.errors.required"> Address is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -139,7 +155,10 @@
                       <label class="col-sm-3 col-form-label">Email ID</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" formControlName="email" placeholder="" [ngClass]="{'is-invalid': submitted && f.email.errors}">
+                          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required"> Email ID is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>

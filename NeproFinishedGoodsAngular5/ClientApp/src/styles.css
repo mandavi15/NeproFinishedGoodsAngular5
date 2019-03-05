@@ -126,3 +126,11 @@ select.selectpicker option:hover {
   height:22px;
 
 }
+.card .card-body .selectBox .form-group {
+  margin: 0px !important;
+}
+input.k-textbox {
+  height: 19px;
+  border: 1px solid #aec3bd;
+  border-radius: 0;
+}

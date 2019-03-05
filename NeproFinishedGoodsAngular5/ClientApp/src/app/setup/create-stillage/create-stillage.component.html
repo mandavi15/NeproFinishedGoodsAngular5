@@ -4,7 +4,7 @@
       <div class="card-body pull-right p-1">
         <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
-        <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+        <button class="btn btn-success btn-sm" (click)="stillageSubmit()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
       </div>
@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="card-body ">
-              <form method="get" class="form-horizontal">
+              <form method="get" [formGroup]="stillageForm">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="row">
@@ -46,15 +46,17 @@
                       <div class="col-lg-9 col-md-9 col-sm-12 form-group mt-0 selectBox">
                         <div class="dropdown">
                           <div class="form-group">
-                            <div class="form-control">
-                              <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                            <div class="">
+                              <select class="selectpicker form-control" placeholder="Select Warehouse" data-size="7" formControlName="warehouse" [ngClass]="{'is-invalid': submitted && f.warehouse.errors}">
                                 <option> Select</option>
                                 <option value="2">WareHouse 1 </option>
                                 <option value="3">WareHouse 2</option>
                                 <option value="4">WareHouse 3</option>
                                 <option value="4">WareHouse 4</option>
-
                               </select>
+                              <div *ngIf="submitted && f.warehouse.errors" class="invalid-feedback">
+                                <div *ngIf="f.warehouse.errors.required"> Warehouse is required</div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -68,7 +70,10 @@
                       <label class="col-sm-2 col-form-label">Stillage ID</label>
                       <div class="col-sm-9">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="stillageID" placeholder="" [ngClass]="{'is-invalid': submitted && f.stillageID.errors}">
+                          <div *ngIf="submitted && f.stillageID.errors" class="invalid-feedback">
+                            <div *ngIf="f.stillageID.errors.required"> Stillage ID is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-create-bin',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
     //styleUrls: ['./create-bin.component.css']
 })
 /** create-bin component*/
-export class CreateBinComponent {
+export class CreateBinComponent implements OnInit {
    
   columnDefs = [
     { headerName: "All", checkboxSelection: true,  field: "all", width: 90 },
@@ -25,4 +26,35 @@ export class CreateBinComponent {
     { all: " ", checkboxSelection: true, site: 'Gurgaon', warehouse: 'Warehouse 4', location: 'Aisle 4', RowName: 'Rack 4', BinName: 'Bin 4' },
     { all: " ", checkboxSelection: true, site: 'Agra', warehouse: 'Warehouse 5', location: 'Aisle 5', RowName: 'Rack 5', BinName: 'Bin 5' }
   ];
+
+
+  constructor(private formbuilder: FormBuilder) { }
+
+  binForm: FormGroup;
+  submitted = false;
+  ngOnInit() {
+    this.binForm = this.formbuilder.group({
+      aislename: ['', Validators.required],
+      site: ['', Validators.required],
+      warehouse: ['', Validators.required],
+      rack: ['', Validators.required],
+      bin: ['', Validators.required]
+    });
+
+
+  }
+
+  binSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.binForm.invalid) {
+      return;
+    }
+
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.binForm.value));
+
+  }
+  get f() { return this.binForm.controls; }
 }
+

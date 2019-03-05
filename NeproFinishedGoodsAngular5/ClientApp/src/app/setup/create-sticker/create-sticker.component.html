@@ -2,10 +2,10 @@
   <div class="container-fluid">
     <div class="card-body pull-right p-1">
       <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-print" aria-hidden="true"></i>Print History</button>
-      <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal1"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Sticker Activity History</button>
+      <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal2"><i class="fa fa-hourglass-half" aria-hidden="true"></i>Sticker Activity History</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
-      <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+      <button class="btn btn-success btn-sm" (click)="stickerSubmit()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
       <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
     </div>
@@ -52,14 +52,17 @@
                 </div>
               </div>
               <div class="card-body ">
-                <form method="get" class="form-horizontal">
+                <form method="get" [formGroup]="stickerForm">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="row">
                         <label class="col-sm-3 col-form-label">Sticker Code</label>
                         <div class="col-sm-8">
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" formControlName="stickerCode" placeholder="" [ngClass]="{'is-invalid': submitted && f.stickerCode.errors}">
+                            <div *ngIf="submitted && f.stickerCode.errors" class="invalid-feedback">
+                              <div *ngIf="f.stickerCode.errors.required"> Sticker Code is required</div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -73,14 +76,16 @@
                         <div class="col-lg-8 col-md-9 col-sm-12 form-group mt-0 selectBox">
                           <div class="dropdown">
                             <div class="form-group">
-                              <div class="form-control">
-                                <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                              <div class="">
+                                <select class="selectpicker form-control" placeholder="Select Truck" data-size="7" formControlName="truck" [ngClass]="{'is-invalid': submitted && f.truck.errors}">
                                   <option> Select</option>
                                   <option value="2">Owned </option>
                                   <option value="3">Rented</option>
                                   <option value="4">Third Party</option>
-
                                 </select>
+                                <div *ngIf="submitted && f.truck.errors" class="invalid-feedback">
+                                  <div *ngIf="f.truck.errors.required"> Truck is required</div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -123,7 +128,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="myModal1" role="dialog">
+<div class="modal fade" id="myModal2" role="dialog">
   <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->

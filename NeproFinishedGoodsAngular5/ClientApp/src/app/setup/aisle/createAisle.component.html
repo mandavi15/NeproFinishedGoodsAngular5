@@ -31,7 +31,7 @@
           </div>
         </div>
 
-                      </div>
+      </div>
       <div class="row mb-5">
         <div class="col-md-12">
           <div class="card ">
@@ -41,7 +41,7 @@
               </div>
             </div>
             <div class="card-body ">
-              <form class="form-horizontal" [formGroup]="aisleForm" >
+              <form class="form-horizontal" [formGroup]="aisleForm">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="row">
@@ -50,14 +50,14 @@
                         <div class="dropdown">
                           <div class="form-group">
                             <div class="">
-                              <select class="selectpicker form-control" placeholder="Select Site"   data-size="7" formControlName="site" [ngClass]="{'is-invalid': submitted && f.site.errors}">
+                              <select class="selectpicker form-control" placeholder="Select Site" data-size="7" formControlName="site" [ngClass]="{'is-invalid': submitted && f.site.errors}">
                                 <option>Select</option>
                                 <option>Noida</option>
                                 <option>Delhi</option>
                                 <option>Agra</option>
                               </select>
                               <div *ngIf="submitted && f.site.errors" class="invalid-feedback">
-                                <div *ngIf="f.site.errors.required">* Site is required</div>
+                                <div *ngIf="f.site.errors.required"> Site is required</div>
                               </div>
                             </div>
                           </div>
@@ -70,37 +70,56 @@
                         <div class="form-group">
                           <input type="text" class="form-control" formControlName="aislename" placeholder="" [ngClass]="{'is-invalid': submitted && f.aislename.errors}">
                           <div *ngIf="submitted && f.aislename.errors" class="invalid-feedback">
-                            <div *ngIf="f.aislename.errors.required">* Aisle Name is required</div>
+                            <div *ngIf="f.aislename.errors.required"> Aisle Name is required</div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    
                   </div>
-
-                      <div class="col-md-6">
+                  <div class="col-md-6">
                     <div class="row">
-                      <label class="col-sm-2 col-form-label col-md-2">WareHouse</label>
+                      <label class="col-sm-2 col-form-label">WareHouse</label>
 
                       <div class="col-lg-9 col-md-9 col-sm-12 form-group mt-0 selectBox">
+                        <!--<div class="dropdown">
+                          <div class="form-group">
 
+                            <select class="form-control" id="sel1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+
+                          </div>
+                        </div>-->
                         <div class="dropdown">
                           <div class="form-group">
                             <div class="">
-                              <select class="selectpicker form-control" data-style="select-with-transition" title="" data-size="7"  formControlName="warehouse" [ngClass]="{'is-invalid': submitted && f.warehouse.errors}">
+                              <select class="selectpicker form-control" data-style="select-with-transition" title="" data-size="7" formControlName="warehouse" [ngClass]="{'is-invalid': submitted && f.warehouse.errors}">
                                 <option> Select</option>
                                 <option value="2">WareHouse 1 </option>
                                 <option value="3">WareHouse 2</option>
                                 <option value="4">WareHouse 3</option>
                               </select>
                               <div *ngIf="submitted && f.warehouse.errors" class="invalid-feedback">
-                                <div *ngIf="f.warehouse.errors.required">* Warehouse  is required</div>
+                                <div *ngIf="f.warehouse.errors.required"> Warehouse  is required</div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
 
+                    </div>
+                    <!--<button type="submit">Submit</button>-->
+                    <!--<div class="row">
+                      <label class="col-sm-2 col-form-label">Disabled</label>
+                      <div class="col-sm-9">
+                        <div class="form-group">
+                          <input type="text" class="form-control" value="Disabled input here.." disabled>
+                        </div>
+                      </div>
+                    </div>-->
                   </div>
                 </div>
               </form>

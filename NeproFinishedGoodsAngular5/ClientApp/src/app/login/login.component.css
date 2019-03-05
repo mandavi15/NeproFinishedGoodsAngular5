@@ -186,34 +186,34 @@ form:after {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
+  /*-webkit-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
   -moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
   -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
   -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
-  box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
+  box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;*/
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  background: #eae7e7 url(https://cssdeck.com/uploads/media/items/8/8bcLQqF.png) no-repeat;
-  border: 1px solid #c8c8c8;
+  /*background: #eae7e7 no-repeat;*/
+  /*border: 1px solid #c8c8c8;*/
   color: #777;
   font: 13px Helvetica, Arial, sans-serif;
   margin: 0 0 10px;
-  padding: 15px 10px 15px 40px;
-  width: 80%;
+  padding: 15px 10px 15px 10px;
+  width: 100%;
 }
 
 .content form input[type="text"]:focus,
 .content form input[type="password"]:focus {
-  -webkit-box-shadow: 0 0 2px #ed1c24 inset;
+  /*-webkit-box-shadow: 0 0 2px #ed1c24 inset;
   -moz-box-shadow: 0 0 2px #ed1c24 inset;
   -ms-box-shadow: 0 0 2px #ed1c24 inset;
   -o-box-shadow: 0 0 2px #ed1c24 inset;
-  box-shadow: 0 0 2px #ed1c24 inset;
-  background-color: #fff;
-  border: 1px solid #ed1c24;
+  box-shadow: 0 0 2px #ed1c24 inset;*/
+  /*background-color: #fff;*/
+  /*border: 1px solid #ed1c24;*/
   outline: none;
 }
 
@@ -312,3 +312,20 @@ form:after {
   background-position: 0 -135px;
   color: #00aeef;
 }
+
+.loginCredentials {
+ float:left; margin-bottom:0}
+
+#login .btn, #forgot .btn {
+  width: 100%;
+  font-size: 0.8rem;
+}
+.btnLogin {
+  cursor: pointer;
+  margin-top: 10%;
+  text-decoration: underline;
+  text-align: left;
+  padding-left: 5px;
+}
+#forgot .form-group {
+margin-bottom:10px}

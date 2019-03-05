@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-stillage',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
 
 })
 /** create-stillage component*/
-export class CreateStillageComponent {
+export class CreateStillageComponent implements OnInit {
   columnDefs = [
     { headerName: "All", checkboxSelection: true, field: "all", width: 150 },
     { headerName: 'WareHouse', field: 'WareHouse', sortable: true, filter: true, width: 280 },
@@ -26,4 +27,31 @@ export class CreateStillageComponent {
     { all: " ", checkboxSelection: true, WareHouse: 'WareHouse 7', StillageID: 'Stillage 7', StickerCode: 'SC0007' },
     { all: " ", checkboxSelection: true, WareHouse: 'WareHouse 8', StillageID: 'Stillage 8', StickerCode: 'SC0008' },
   ];
+
+  constructor(private formbuilder: FormBuilder) { }
+
+  stillageForm: FormGroup;
+  submitted = false;
+  ngOnInit() {
+    this.stillageForm = this.formbuilder.group({
+      warehouse: ['', Validators.required],
+      stillageID: ['', Validators.required]
+    });
+
+
+  }
+
+  stillageSubmit() {
+    this.submitted = true;
+
+    // stop here if form is invalid
+    if (this.stillageForm.invalid) {
+      return;
+    }
+
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.stillageForm.value));
+
+  }
+  get f() { return this.stillageForm.controls; }
+
 }

@@ -4,7 +4,7 @@
       <div class="card-body pull-right p-1">
         <button class="btn btn-success btn-sm"><i class="fa fa-plus-square-o" aria-hidden="true"></i>New</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
-        <button class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
+        <button class="btn btn-success btn-sm" (click)="truckSubmit()"><i class="fa fa-floppy-o" aria-hidden="true"></i>Save</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
         <button class="btn btn-success btn-sm"><i class="fa fa-undo" aria-hidden="true"></i>Back</button>
       </div>
@@ -23,13 +23,10 @@
                                class="ag-theme-balham"
                                [rowData]="rowData"
                                [columnDefs]="columnDefs"></ag-grid-angular>
-
-
              
             </div>
           </div>
         </div>
-
 
       </div>
       <div class="row mb-5">
@@ -40,69 +37,82 @@
                 <h4 class="card-title">Create Truck</h4>
               </div>
             </div>
-            <div class="card-body ">
-              <form method="get" class="form-horizontal">
+            <div class="card-body">
+              <form method="get" [formGroup]="truckForm">
                 <div class="row">
                   <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-sm-3 col-form-label">Vehicle Type</label>
+                    <div class="row pr-2">
+                      <label class="col-sm-3 col-md-4 col-form-label">Vehicle Type</label>
                       <div class="col-sm-8 form-group mt-0 selectBox">
                         <div class="dropdown">
                           <div class="form-group">
-                            <div class="form-control">
-                              <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                            <div class="">
+                              <select class="selectpicker form-control" data-style="select-with-transition" title="" data-size="7" formControlName="vehicleType" [ngClass]="{'is-invalid': submitted && f.vehicleType.errors}">
                                 <option> Select</option>
                                 <option value="2">Truck </option>
                                 <option value="3">Van</option>
                                 <option value="4">Mini Truck</option>
-
                               </select>
+                              <div *ngIf="submitted && f.vehicleType.errors" class="invalid-feedback">
+                                <div *ngIf="f.vehicleType.errors.required">Vehicle Type is required</div>
+                              </div>
                             </div>
                           </div>
                         </div>
 
                       </div>
                     </div>
-                    <div class="row">
-                      <label class="col-sm-3 col-form-label">Vehicle Owner Name</label>
+                    <div class="row pr-2">
+                      <label class="col-sm-3 col-md-4 col-form-label">Vehicle Owner Name</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="vehicleOwnerName" placeholder="" [ngClass]="{'is-invalid': submitted && f.vehicleOwnerName.errors}">
+                          <div *ngIf="submitted && f.vehicleOwnerName.errors" class="invalid-feedback">
+                            <div *ngIf="f.vehicleOwnerName.errors.required">Vehicle Owner Name is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <label class="col-sm-3 col-form-label">Capacity in Weight</label>
+                    <div class="row pr-2">
+                      <label class="col-sm-3 col-md-4 col-form-label">Capacity in Weight</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="capacityInWeight" placeholder="" [ngClass]="{'is-invalid': submitted && f.capacityInWeight.errors}">
+                          <div *ngIf="submitted && f.capacityInWeight.errors" class="invalid-feedback">
+                            <div *ngIf="f.capacityInWeight.errors.required">Capacity in Weight is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <label class="col-sm-3 col-form-label">Vehicle Name</label>
+                    <div class="row pr-2">
+                      <label class="col-sm-3 col-md-4 col-form-label">Vehicle Name</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="vehicleName" placeholder="" [ngClass]="{'is-invalid': submitted && f.vehicleName.errors}">
+                          <div *ngIf="submitted && f.vehicleName.errors" class="invalid-feedback">
+                            <div *ngIf="f.vehicleName.errors.required">Vehicle Name is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="row">
-                      <label class="col-sm-3 col-form-label">Vehicle Possessed By</label>
+                    <div class="row pr-2">
+                      <label class="col-sm-3 col-md-4 col-form-label">Vehicle Possessed By</label>
 
                       <div class="col-sm-8 form-group mt-0 selectBox">
 
                         <div class="dropdown">
                           <div class="form-group">
-                            <div class="form-control">
-                              <select class="selectpicker" data-style="select-with-transition" title="" data-size="7">
+                            <div class="">
+                              <select class="selectpicker form-control" data-style="select-with-transition" title="" data-size="7" formControlName="vehiclePossessed" [ngClass]="{'is-invalid': submitted && f.vehiclePossessed.errors}">
                                 <option> Select</option>
                                 <option value="2">Owned</option>
                                 <option value="3">Third Party</option>
-
                               </select>
+                              <div *ngIf="submitted && f.vehiclePossessed.errors" class="invalid-feedback">
+                                <div *ngIf="f.vehiclePossessed.errors.required">Vehicle Possessed By is required</div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -110,19 +120,25 @@
                       </div>
 
                     </div>
-                    <div class="row">
-                      <label class="col-sm-3 col-form-label">Registration No.</label>
+                    <div class="row pr-2">
+                      <label class="col-sm-3 col-md-4 col-form-label">Registration No.</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="registrationNo" placeholder="" [ngClass]="{'is-invalid': submitted && f.registrationNo.errors}">
+                          <div *ngIf="submitted && f.registrationNo.errors" class="invalid-feedback">
+                            <div *ngIf="f.registrationNo.errors.required">Registration No. is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <label class="col-sm-3 col-form-label">Capacity in Volume</label>
+                    <div class="row pr-2">
+                      <label class="col-sm-3 col-md-4 col-form-label">Capacity in Volume</label>
                       <div class="col-sm-8">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="">
+                          <input type="text" class="form-control" formControlName="capacityInVolume" placeholder="" [ngClass]="{'is-invalid': submitted && f.capacityInVolume.errors}">
+                          <div *ngIf="submitted && f.capacityInVolume.errors" class="invalid-feedback">
+                            <div *ngIf="f.capacityInVolume.errors.required">Capacity in Volume is required</div>
+                          </div>
                         </div>
                       </div>
                     </div>
