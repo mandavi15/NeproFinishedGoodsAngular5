@@ -34,6 +34,7 @@ import { GridPickedListComponent } from './pick-to-load-process/grid-picked-list
 import { GridPickingListComponent } from './pick-to-load-process/grid-picking-list/grid-picking-list.component';
 import { LoginComponent } from './login/login.component';
 
+
 //import { AuthGuard } from './auth.guard';
 //import { GridPickingLocationComponent } from './pick-to-load-process/grid-picking-location/grid-picking-location.component';
 
