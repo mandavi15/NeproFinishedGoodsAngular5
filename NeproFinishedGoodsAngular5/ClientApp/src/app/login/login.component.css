@@ -78,7 +78,7 @@ form:after {
 }
 
 .content {
-  background: #f9f9f9;
+  background: #47a287 !important;
   background: -moz-linear-gradient(top, rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
   background: -webkit-linear-gradient(top, rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
   background: -o-linear-gradient(top, rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
@@ -329,3 +329,34 @@ form:after {
 }
 #forgot .form-group {
 margin-bottom:10px}
+
+.btn.btn-login {
+  background: #fff !important;
+  color: #085d43 !important;
+}
+
+.loginmain label, .loginmain h6 {
+  color: #fff;
+  text-shadow: none;
+}
+
+.loginmain .form-control {
+  color: #ffffff;
+}
+
+.content[_ngcontent-c4] form[_ngcontent-c4] input[type="text"][_ngcontent-c4], .content[_ngcontent-c4] form[_ngcontent-c4] input[type="password"][_ngcontent-c4] {
+  color: #fff;
+  padding-left: 0;
+}
+  .content[_ngcontent-c4]:after, .content[_ngcontent-c4]:before {
+  background: #218869 !important;
+}
+
+.invalid-feedback {
+  margin-top: .25rem;
+  font-size: 90%;
+  font-weight: bold;
+  color: #cc0a0a;
+  text-shadow: none
+}
+

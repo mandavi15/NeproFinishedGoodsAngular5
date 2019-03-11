@@ -2,52 +2,40 @@
 
 <div class="container loginmain main">
   <section class="content w3-container w3-center w3-animate-zoom" style="margin-top: 14%;" id="login">
-    <form novalidate
-          [formGroup]="myform">
+    <form [formGroup]="loginForm">
       <h1><img src="../../assets/img/logo.png" style="margin-top: -7%;" /></h1>
-      <div class="form-group"
-           [ngClass]="{
-        'has-danger': mail.invalid && (email.dirty || email.touched),
-        'has-success': email.valid && (email.dirty || email.touched)
-   }">
+      <div class="form-group">
         <label class="loginCredentials">Email</label>
-        <input type="email"
-               class="form-control"
-               formControlName="email"
-               required>
-        <div class="form-control-feedback"
+        <input type="email" class="form-control" formControlName="email" placeholder="" [ngClass]="{'is-invalid': submitted && f.email.errors}">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div class="pull-left" *ngIf="f.email.errors.required"> Email is required</div>
+        </div>
+        <!--<div class="form-control-feedback"
              *ngIf="email.errors && (email.dirty || email.touched)">
           <p *ngIf="email.errors.required">Email is required</p>
           <p *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
-        </div>
+        </div>-->
 
-        <!--
-        <pre>Valid? {{ myform.controls.email.valid }}</pre>
-        <pre>Dirty? {{ myform.controls.email.dirty }}</pre>
-      -->
+
 
       </div>
 
-      <div class="form-group"
-           [ngClass]="{
-        'has-danger': password.invalid && (password.dirty || password.touched),
-        'has-success': password.valid && (password.dirty || password.touched)
-   }">
+      <div class="form-group">
         <label class="loginCredentials">Password</label>
-        <input type="password"
-               class="form-control"
-               formControlName="password"
-               required>
-        <div class="form-control-feedback"
+        <input type="password" class="form-control" formControlName="password" placeholder="" [ngClass]="{'is-invalid': submitted && f.password.errors}">
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div class="pull-left" *ngIf="f.password.errors.required"> Password is required</div>
+        </div>
+        <!--<div class="form-control-feedback"
              *ngIf="password.errors && (password.dirty || password.touched)">
           <p *ngIf="password.errors.required">Password is required</p>
           <p *ngIf="password.errors.minlength">Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters </p>
-        </div>
+        </div>-->
       </div>
       <div class="col-md-12 col-xs-12 col-sm-12 p-0">
 
 
-        <button class="btn btn-success btn-sm" type="submit" (click)="createForm()">Login</button>
+        <button class="btn btn-login btn-sm" type="submit" (click)="loginSubmit()">Login</button>
 
         <div class="col-md-12 col-xs-12 col-sm-12 clearfix p-0">
           <h6 id="btn1" class="btnLogin">Forgot Password?</h6>
@@ -55,49 +43,28 @@
 
 
       </div>
-      <!--
-      <pre>{{ password.errors | json }}</pre>
-    -->
 
-      <pre>{{myform.value | json}}</pre>
+
     </form>
-    <div class="button">
 
-    </div>
   </section>
 
-  <section class="content w3-container w3-center w3-animate-zoom" style="margin-top: 14%; display:none;" id="forgot">
-    <form action="">
+ <section class="content w3-container w3-center w3-animate-zoom" style="margin-top: 14%; display:none;" id="forgot">
+    <form>
 
       <h1><img src="../../assets/img/logo.png" style="margin-top: -7%;" /></h1>
 
-      <div class="form-group"
-           [ngClass]="{
-        'has-danger': mail.invalid && (email.dirty || email.touched),
-        'has-success': email.valid && (email.dirty || email.touched)
-   }">
+      <div class="form-group">
         <label class="loginCredentials">Enter Email</label>
-        <input type="email"
-               class="form-control"
-               formControlName="email"
-               required>
-        <div class="form-control-feedback"
-             *ngIf="email.errors && (email.dirty || email.touched)">
-          <p *ngIf="email.errors.required">Email is required</p>
-          <p *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
-        </div>
-
-        <!--
-    <pre>Valid? {{ myform.controls.email.valid }}</pre>
-    <pre>Dirty? {{ myform.controls.email.dirty }}</pre>
-  -->
+        <input type="email" class="form-control" placeholder="">
+                          
 
       </div>
       <div class="col-md-12 col-xs-12 col-sm-12 p-0">
 
 
-          <button class="btn btn-success btn-sm" type="submit" (click)="loginSubmit()">Submit</button>
-   
+          <button class="btn btn-login btn-sm" type="submit">Submit</button>
+
         <div class="col-md-12 col-xs-12 col-sm-12 p-0">
           <h6 id="btn2" class="btnLogin">Login</h6>
 
@@ -106,8 +73,6 @@
       </div>
     </form>
 
-    <div class="button">
 
-    </div>
   </section>
 </div>

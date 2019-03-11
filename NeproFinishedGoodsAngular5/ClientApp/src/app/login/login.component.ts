@@ -1,59 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-//import { FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-//import { AuthService } from '../auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'model-form',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-/** Login component*/
+/** Login component **/
 export class LoginComponent implements OnInit {
-  myform: FormGroup;
-  email: FormControl;
-  password: FormControl;
-  public href: string = "";
-  constructor(private router: Router) { }
+  constructor(private formbuilder: FormBuilder) { }
 
+  loginForm: FormGroup;
+  submitted = false;
   ngOnInit() {
-    this.createFormControls();
-    this.createForm();
+    this.loginForm = this.formbuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
 
-    this.href = this.router.url;
-
-    console.log(this.router.url);
-  }
-
-  createFormControls() {
-    this.email = new FormControl('', [
-      Validators.required,
-      Validators.pattern("[^ @]*@[^ @]*")
-    ]);
-    this.password = new FormControl('', [
-      Validators.required,
-      Validators.minLength(8)
-    ]);
-   
-  }
-
-  createForm() {
-    this.myform = new FormGroup({
-      email: this.email,
-      password: this.password
     });
+  
   }
-  //loginSubmit() {
-  //  this.myform = true;
 
-  //  // stop here if form is invalid
-  //  if (this.myform.invalid) {
-  //    return;
-  //  }
+  loginSubmit() {
+    this.submitted = true;
 
-  //  alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.myform.value));
+    // stop here if form is invalid
+    if (this.loginForm.invalid) {
+      return;
+    }
 
-  //}
-  //get f() { return this.myform.controls; }
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value));
+
+  };
+ 
+
+  get f() { return this.loginForm.controls; }
 }
